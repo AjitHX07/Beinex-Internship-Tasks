@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+main {
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+
+
+    a {
+        color: black;
+    }
+
+}
+
+.sub-main {
+    width: 90%;
+}
+
+.education_divs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education_h5 {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.education_p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+li {
+    margin-top: 5px;
+}
+
+.skills-p {
+    font-size: 15px;
+
+
+}
+
+.skill-title {
+    font-weight: 600;
+}
