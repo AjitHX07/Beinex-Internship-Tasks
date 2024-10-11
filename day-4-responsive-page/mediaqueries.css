@@ -1,5 +1,54 @@
 @media (max-width:480px) {
 
+    .toggle-button {
+        display: flex;
+    }
+
+    .logo-div {
+        display: block;
+    }
+
+
+    /* nav,
+    .nav-search {
+        display: none;
+    } */
+
+    header {
+        /* position: absolute; */
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 2rem;
+
+        ul {
+            flex-direction: column;
+            margin: 0;
+        }
+
+    }
+
+    .nav-search {
+        width: 100%;
+
+        input {
+            margin-top: 1rem;
+            width: 16rem;
+            height: 1.9rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            width: 4rem;
+            height: 1.9rem;
+        }
+
+    }
 
 
 
@@ -43,6 +92,124 @@
 
             .div-3 {
                 bottom: 1rem;
+            }
+        }
+    }
+
+    #orange-article {
+        height: 80rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+
+    }
+
+    .items {
+        width: 85%;
+    }
+
+}
+
+
+@media (min-width:481px) and (max-width: 1024px) {
+
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .logo-div {
+        display: block;
+    }
+
+
+    /* nav,
+        .nav-search {
+            display: none;
+        } */
+
+    header {
+        /* position: absolute; */
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 2rem;
+
+        ul {
+            flex-direction: column;
+            margin: 0;
+        }
+
+    }
+
+    .nav-search {
+        width: 100%;
+
+        input {
+            margin-top: 1rem;
+            width: 16rem;
+            height: 1.9rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            width: 4rem;
+            height: 1.9rem;
+        }
+
+    }
+
+    #green-article {
+        height: 25rem;
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+
+    main {
+        height: 115rem;
+
+
+        h2 {
+            padding: 0 2.6rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            padding: 0 4rem;
+            margin-top: 1rem;
+        }
+
+        .main-box {
+            flex-direction: column;
+            margin-top: 1rem;
+            align-items: center;
+            gap: 15rem;
+        }
+
+        .main-box-text {
+            flex-direction: column;
+            gap: 25rem;
+            position: relative;
+            bottom: 67rem;
+
+            .div-1 {
+                margin-left: 5rem;
+            }
+
+            .div-2 {
+                margin-left: 8rem;
+            }
+
+            .div-3 {
+                bottom: 1rem;
+                left: 3rem;
             }
         }
     }
