@@ -308,7 +308,7 @@ header {
     /* background-color: rgb(92, 97, 97); */
 
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 
@@ -321,11 +321,24 @@ header {
     background-color: rgb(35, 39, 39);
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
 
 }
 
+.footer-list-1 {
 
+    margin-top: 6rem;
+
+    p a {
+        color: rgb(214, 218, 221);
+        text-decoration: none;
+    }
+}
+
+.footer-list-2 {
+    margin-top: 6rem;
+}
 
 .form-div {
 
@@ -336,13 +349,12 @@ header {
     border-radius: 12px;
 }
 
-/* From Uiverse.io by Subaashbala */
 button {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 1em 0em 1em 1em;
-    background-color: yellow;
+    padding: 1em 2em 1em 1em;
+    background-color: rgb(236, 236, 147);
     cursor: pointer;
     box-shadow: 4px 6px 0px black;
     border: 4px solid;
@@ -350,6 +362,7 @@ button {
     position: relative;
     overflow: hidden;
     z-index: 100;
+    text-align: center;
     transition: box-shadow 250ms, transform 250ms, filter 50ms;
 }
 
@@ -442,4 +455,9 @@ button:active .arrowContainer {
 #footer-links {
     color: white;
     text-decoration: none;
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 2rem;
 }
