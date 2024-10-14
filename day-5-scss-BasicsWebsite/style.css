@@ -78,8 +78,7 @@ main {
   background-position: center;
   background-size: cover;
   opacity: 0.5;
-  filter: brightness(0.2);
-  filter: contrast(0.8);
+  filter: brightness(0) contrast(-10%) blur(5px);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -92,7 +92,7 @@
     gap: 6rem;
   }
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 480px) and (max-width: 991.98px) {
   header {
     height: 8rem;
     flex-direction: column;
@@ -105,7 +105,7 @@
   }
 
   main {
-    height: 150vh;
+    height: 80vh;
   }
 
   #box-article {
@@ -137,7 +137,7 @@
   }
 
   #courses {
-    height: 100rem;
+    height: 110rem;
     .course-section {
       flex-direction: column;
 
@@ -159,7 +159,7 @@
   }
 
   #testmonials {
-    height: 100rem;
+    height: 90rem;
     .testmonials-sections {
       flex-direction: column;
     }
@@ -183,6 +183,6 @@
   }
   .top-footer {
     flex-direction: column;
-    gap: 6rem;
+    gap: 3rem;
   }
 }
