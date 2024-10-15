@@ -1,0 +1,167 @@
+@media (max-width: 480px) {
+  main .btn-main {
+    padding: 0.6rem 2rem;
+  }
+  #box-article {
+    height: 100rem;
+  }
+  #box-article section {
+    flex-direction: column;
+  }
+  #box-article section .box-items {
+    width: 85%;
+    height: 20rem;
+  }
+  #about {
+    height: 110vh;
+    flex-direction: column;
+  }
+  #about .about-img {
+    width: 90%;
+  }
+  #about .about-img img {
+    width: 100%;
+  }
+  #about .about-data {
+    width: 80%;
+    padding: 0;
+  }
+  #about .about-data .btn-about {
+    margin-top: 5rem;
+    padding: 0.7rem 3rem;
+    width: 13rem;
+  }
+  #about .about-data .list {
+    width: 150%;
+    margin-left: -6rem;
+    font-size: 0.8rem;
+  }
+  #categories .cate-heading h4 {
+    margin-top: 15rem;
+  }
+  #course {
+    height: 100rem;
+  }
+  #course .main-box {
+    flex-direction: column;
+  }
+  #course .main-box .course-boxs {
+    width: 90%;
+  }
+  #instructors {
+    height: 150rem;
+  }
+  #instructors .instructors-box {
+    flex-direction: column;
+  }
+  #instructors .instructors-box .instr-items {
+    width: 90%;
+  }
+  #testmonials {
+    height: 100rem;
+  }
+  #testmonials .testmonials-sections {
+    flex-direction: column;
+  }
+  #testmonials .testmonials-sections .testi-items {
+    width: 90%;
+  }
+  footer {
+    height: 80rem;
+  }
+  footer .top-footer {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  footer .top-footer .footer-nav,
+  footer .top-footer .footer-constacts,
+  footer .top-footer .footer-gallery,
+  footer .top-footer .footer-news {
+    width: 90%;
+  }
+  footer .top-footer .footer-constacts .social-footer {
+    margin: 2rem 0;
+    gap: 6rem;
+  }
+  footer button {
+    right: 2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  main .btn-main {
+    padding: 0.6rem 2rem;
+  }
+  #box-article {
+    height: 100rem;
+  }
+  #box-article section {
+    flex-direction: column;
+  }
+  #box-article section .box-items {
+    width: 85%;
+    height: 20rem;
+  }
+  #about {
+    height: 110vh;
+    flex-direction: column;
+  }
+  #about .about-img {
+    width: 90%;
+  }
+  #about .about-img img {
+    width: 100%;
+  }
+  #about .about-data {
+    width: 80%;
+  }
+  #categories .cate-heading h4 {
+    margin-top: 13rem;
+  }
+  #course {
+    height: 100rem;
+  }
+  #course .main-box {
+    flex-direction: column;
+  }
+  #course .main-box .course-boxs {
+    width: 90%;
+  }
+  #instructors {
+    height: 150rem;
+  }
+  #instructors .instructors-box {
+    flex-direction: column;
+  }
+  #instructors .instructors-box .instr-items {
+    width: 90%;
+  }
+  #testmonials {
+    height: 100rem;
+  }
+  #testmonials .testmonials-sections {
+    flex-direction: column;
+  }
+  #testmonials .testmonials-sections .testi-items {
+    width: 90%;
+  }
+  footer {
+    height: 80rem;
+  }
+  footer .top-footer {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  footer .top-footer .footer-nav,
+  footer .top-footer .footer-constacts,
+  footer .top-footer .footer-gallery,
+  footer .top-footer .footer-news {
+    width: 90%;
+  }
+  footer .top-footer .footer-constacts .social-footer {
+    margin: 2rem 0;
+    gap: 6rem;
+  }
+  footer button {
+    right: 2rem;
+  }
+}/*# sourceMappingURL=mediaQuerys.css.map */

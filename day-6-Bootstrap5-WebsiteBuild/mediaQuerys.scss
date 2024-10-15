@@ -1,0 +1,221 @@
+@media (max-width: 480px) {
+  main {
+    .btn-main {
+      padding: 0.6rem 2rem;
+    }
+  }
+
+  #box-article {
+    height: 100rem;
+
+    section {
+      flex-direction: column;
+
+      .box-items {
+        width: 85%;
+        height: 20rem;
+      }
+    }
+  }
+
+  #about {
+    height: 110vh;
+    flex-direction: column;
+
+    .about-img {
+      width: 90%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .about-data {
+      width: 80%;
+      padding: 0;
+
+      .btn-about {
+        margin-top: 5rem;
+        padding: 0.7rem 3rem;
+        width: 13rem;
+      }
+      .list {
+        width: 150%;
+        margin-left: -6rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  #categories {
+    .cate-heading {
+      h4 {
+        margin-top: 15rem;
+      }
+    }
+  }
+
+  #course {
+    height: 100rem;
+    .main-box {
+      flex-direction: column;
+
+      .course-boxs {
+        width: 90%;
+      }
+    }
+  }
+
+  #instructors {
+    height: 150rem;
+    .instructors-box {
+      flex-direction: column;
+
+      .instr-items {
+        width: 90%;
+      }
+    }
+  }
+
+  #testmonials {
+    height: 100rem;
+    .testmonials-sections {
+      flex-direction: column;
+
+      .testi-items {
+        width: 90%;
+      }
+    }
+  }
+
+  footer {
+    height: 80rem;
+
+    .top-footer {
+      flex-direction: column;
+      gap: 4rem;
+
+      .footer-nav,
+      .footer-constacts,
+      .footer-gallery,
+      .footer-news {
+        width: 90%;
+      }
+
+      .footer-constacts {
+        .social-footer {
+          margin: 2rem 0;
+          gap: 6rem;
+        }
+      }
+    }
+    button {
+      right: 2rem;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    .btn-main {
+      padding: 0.6rem 2rem;
+    }
+  }
+
+  #box-article {
+    height: 100rem;
+
+    section {
+      flex-direction: column;
+
+      .box-items {
+        width: 85%;
+        height: 20rem;
+      }
+    }
+  }
+
+  #about {
+    height: 110vh;
+    flex-direction: column;
+
+    .about-img {
+      width: 90%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .about-data {
+      width: 80%;
+    }
+  }
+
+  #categories {
+    .cate-heading {
+      h4 {
+        margin-top: 13rem;
+      }
+    }
+  }
+
+  #course {
+    height: 100rem;
+    .main-box {
+      flex-direction: column;
+
+      .course-boxs {
+        width: 90%;
+      }
+    }
+  }
+
+  #instructors {
+    height: 150rem;
+    .instructors-box {
+      flex-direction: column;
+
+      .instr-items {
+        width: 90%;
+      }
+    }
+  }
+
+  #testmonials {
+    height: 100rem;
+    .testmonials-sections {
+      flex-direction: column;
+
+      .testi-items {
+        width: 90%;
+      }
+    }
+  }
+
+  footer {
+    height: 80rem;
+
+    .top-footer {
+      flex-direction: column;
+      gap: 4rem;
+
+      .footer-nav,
+      .footer-constacts,
+      .footer-gallery,
+      .footer-news {
+        width: 90%;
+      }
+
+      .footer-constacts {
+        .social-footer {
+          margin: 2rem 0;
+          gap: 6rem;
+        }
+      }
+    }
+    button {
+      right: 2rem;
+    }
+  }
+}

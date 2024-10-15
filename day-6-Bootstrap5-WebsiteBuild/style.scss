@@ -16,11 +16,20 @@ header {
   .logo {
     @include flex;
     gap: 1rem;
-    background-color: antiquewhite;
+    background-color: rgb(148, 107, 53);
   }
   nav {
     height: 100%;
+    width: 100%;
+    background-color: rgb(118, 148, 148);
     @include flex;
+
+    .slipt-nav {
+      @include flex;
+      justify-content: space-between;
+      gap: 25rem;
+      height: 100%;
+    }
 
     .button-div {
       @include flex;
@@ -28,6 +37,7 @@ header {
       height: 100%;
       margin-left: -21px;
       left: 1rem;
+      padding: 1rem;
     }
 
     ul {
@@ -135,6 +145,8 @@ main {
 
   .about-img {
     height: 90%;
+    width: 90%;
+
     @include flex;
     img {
       object-fit: cover;
@@ -258,8 +270,9 @@ main {
     .img {
       width: 100%;
     }
-    .course-box {
+    .course-boxs {
       @include flex;
+      height: 26rem;
       flex-direction: column;
       background-color: $box-background;
       text-align: center;

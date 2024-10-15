@@ -16,13 +16,23 @@ header .logo {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: antiquewhite;
+  background-color: rgb(148, 107, 53);
 }
 header nav {
   height: 100%;
+  width: 100%;
+  background-color: rgb(118, 148, 148);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header nav .slipt-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25rem;
+  height: 100%;
 }
 header nav .button-div {
   display: flex;
@@ -32,6 +42,7 @@ header nav .button-div {
   height: 100%;
   margin-left: -21px;
   left: 1rem;
+  padding: 1rem;
 }
 header nav ul {
   list-style: none;
@@ -152,6 +163,7 @@ main .btn-main {
 }
 #about .about-img {
   height: 90%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,17 +298,18 @@ main .btn-main {
 #course .course-box .img {
   width: 100%;
 }
-#course .course-box .course-box {
+#course .course-box .course-boxs {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 26rem;
   flex-direction: column;
   background-color: #f0fbfc;
   text-align: center;
   width: 28.5714285714%;
   padding: 0;
 }
-#course .course-box .course-box .botton-div {
+#course .course-box .course-boxs .botton-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,10 +319,10 @@ main .btn-main {
   gap: 2rem;
   text-align: center;
 }
-#course .course-box .course-box .botton-div p {
+#course .course-box .course-boxs .botton-div p {
   margin-top: 0.9rem;
 }
-#course .course-box .course-box h3 {
+#course .course-box .course-boxs h3 {
   font-size: 1rem;
   padding: 0 2rem;
 }
