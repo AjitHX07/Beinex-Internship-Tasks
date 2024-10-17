@@ -4,3 +4,10 @@ main {
   height: 90vh;
   background-color: $even_container_bg;
 }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    height: 80vh;
+    background-color: $even_container_bg;
+  }
+}

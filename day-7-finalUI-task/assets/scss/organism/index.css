@@ -16,6 +16,12 @@ main {
   background-color: #f5f7fa;
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    height: 80vh;
+    background-color: #f5f7fa;
+  }
+}
 .client {
   height: 12.875rem;
   text-align: center;
@@ -79,7 +85,7 @@ main {
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .localbusiness-div {
-    height: 45rem;
+    height: 35rem;
     text-align: center;
   }
 }
@@ -129,8 +135,10 @@ main {
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
-    flex-direction: column-reverse !important;
-    height: 90rem;
+    flex-direction: column !important;
+    height: 50rem;
+    justify-content: space-between;
+    background-color: aqua;
   }
 }
 .tesla-article {

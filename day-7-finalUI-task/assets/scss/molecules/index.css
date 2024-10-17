@@ -370,8 +370,9 @@ p {
     width: 90% !important;
   }
   .local-div__right {
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
+    gap: 7rem !important;
     justify-content: center;
     width: 90% !important;
     margin-right: 1rem !important;
@@ -405,6 +406,10 @@ p {
     flex-direction: column-reverse !important;
     height: 60rem;
   }
+  .design .pixel-sec-design {
+    height: 70rem !important;
+    margin: 0 !important;
+  }
   .design .pixel-sec {
     flex-direction: column;
     justify-content: center;
@@ -431,7 +436,7 @@ p {
     padding: 2rem !important;
   }
   .design .pixel-sec__data {
-    width: 80% !important;
+    width: 90% !important;
     background-color: aqua;
     padding-right: 0 !important;
   }

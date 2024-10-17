@@ -50,7 +50,9 @@
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
-    flex-direction: column-reverse !important;
-    height: 90rem;
+    flex-direction: column !important;
+    height: 50rem;
+    justify-content: space-between;
+    background-color: aqua;
   }
 }

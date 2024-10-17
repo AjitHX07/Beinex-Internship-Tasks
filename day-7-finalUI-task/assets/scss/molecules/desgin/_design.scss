@@ -22,6 +22,11 @@
     flex-direction: column-reverse !important;
     height: 60rem;
 
+    .pixel-sec-design {
+      height: 70rem !important;
+      margin: 0 !important;
+    }
+
     .pixel-sec {
       flex-direction: column;
       justify-content: center;
@@ -49,7 +54,7 @@
       padding: 2rem !important;
     }
     .pixel-sec__data {
-      width: 80% !important;
+      width: 90% !important;
       background-color: aqua;
       padding-right: 0 !important;
     }

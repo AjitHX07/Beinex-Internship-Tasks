@@ -499,8 +499,9 @@ p {
     width: 90% !important;
   }
   .local-div__right {
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
+    gap: 7rem !important;
     justify-content: center;
     width: 90% !important;
     margin-right: 1rem !important;
@@ -534,6 +535,10 @@ p {
     flex-direction: column-reverse !important;
     height: 60rem;
   }
+  .design .pixel-sec-design {
+    height: 70rem !important;
+    margin: 0 !important;
+  }
   .design .pixel-sec {
     flex-direction: column;
     justify-content: center;
@@ -560,7 +565,7 @@ p {
     padding: 2rem !important;
   }
   .design .pixel-sec__data {
-    width: 80% !important;
+    width: 90% !important;
     background-color: aqua;
     padding-right: 0 !important;
   }
@@ -793,6 +798,12 @@ main {
   background-color: #f5f7fa;
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    height: 80vh;
+    background-color: #f5f7fa;
+  }
+}
 .client {
   height: 12.875rem;
   text-align: center;
@@ -856,7 +867,7 @@ main {
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .localbusiness-div {
-    height: 45rem;
+    height: 35rem;
     text-align: center;
   }
 }
@@ -906,8 +917,10 @@ main {
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
-    flex-direction: column-reverse !important;
-    height: 90rem;
+    flex-direction: column !important;
+    height: 50rem;
+    justify-content: space-between;
+    background-color: aqua;
   }
 }
 .tesla-article {
