@@ -1,7 +1,175 @@
 $accent_color: #4caf4f;
+$even_container_bg: #f5f7fa;
+$link_color: #18191f;
 
 .nav-btn-1 {
   background-color: white !important;
   color: $accent_color;
   margin-right: 1rem;
+}
+
+.logo {
+  img {
+    max-width: 100%;
+  }
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  top: 1rem;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: $link_color;
+  }
+}
+
+.link {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      a {
+        color: $link_color !important;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+.nav-btn {
+  display: flex;
+  gap: 1rem;
+
+  .nav_btn-1 {
+    background-color: white;
+    color: $accent_color;
+    border: none;
+    padding: 0.4rem 2rem;
+    border-radius: 6px;
+  }
+
+  .nav_btn-2 {
+    background-color: $accent_color;
+    color: white;
+    border: none;
+    padding: 0.4rem 2rem;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .link,
+  .nav-btn {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: $even_container_bg;
+    padding: 1rem;
+  }
+
+  .link.active,
+  .nav-btn.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .link {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $even_container_bg;
+    padding: 1rem;
+
+    ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  .logo {
+    margin-top: 1rem;
+  }
+
+  .nav-btn {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .link.active,
+  .nav-btn.active {
+    display: flex;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .link,
+  .nav-btn {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: $even_container_bg;
+    padding: 1rem;
+  }
+
+  .link.active,
+  .nav-btn.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .link {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $even_container_bg;
+    padding: 1rem;
+
+    ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  .logo {
+    margin-top: 1rem;
+  }
+
+  .nav-btn {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .link.active,
+  .nav-btn.active {
+    display: flex;
+  }
 }

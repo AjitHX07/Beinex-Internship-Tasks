@@ -3,6 +3,11 @@ $even_container_bg: #f5f7fa;
 .tesla-article {
   background-color: $even_container_bg;
   height: 24.375rem;
-
   margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .tesla-article {
+    height: 70rem;
+  }
 }

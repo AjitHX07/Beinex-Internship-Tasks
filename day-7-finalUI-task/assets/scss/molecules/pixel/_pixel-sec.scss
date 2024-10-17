@@ -17,9 +17,29 @@ $paragraph_color: #717171;
     margin: 2rem 0;
   }
   &.pixel-sec {
-    // background-color: aquamarine;
-    // width: 60%;
     height: 90%;
     padding: 10rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .pixel-sec {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 50rem;
+    padding: 2rem !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pixel-sec {
+    flex-direction: column;
+    justify-content: center;
+    height: 50rem;
+    width: 40%;
+    padding: 2rem !important;
+  }
+
+  .pixel-sec__data {
   }
 }

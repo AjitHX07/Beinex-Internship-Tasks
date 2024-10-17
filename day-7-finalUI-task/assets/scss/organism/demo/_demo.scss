@@ -16,3 +16,8 @@ $even_container_bg: #f5f7fa;
     padding: 0.8rem 2rem;
   }
 }
+@media (max-width: 600px) {
+  .demo {
+    height: 30rem;
+  }
+}

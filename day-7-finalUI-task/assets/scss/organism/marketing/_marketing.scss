@@ -1,3 +1,10 @@
 .marketing {
   height: 31.625rem;
 }
+
+@media (max-width: 600px) {
+  .marketing {
+    height: 100rem;
+    position: relative;
+  }
+}

@@ -30,3 +30,23 @@ $paragraph_color: #717171;
   padding-top: 2rem !important;
   margin-top: 3rem !important;
 }
+
+@media (max-width: 600px) {
+  .system-box {
+    flex-direction: column;
+    margin-top: 2rem !important;
+    align-items: center;
+    height: 60rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .system-box {
+    margin-top: 1rem !important;
+    width: 100%;
+    gap: 1rem;
+
+    .items-box {
+      width: 16.75rem !important;
+    }
+  }
+}

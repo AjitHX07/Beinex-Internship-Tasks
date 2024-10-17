@@ -64,3 +64,22 @@ $link_color: #d9dbe1;
     color: white !important;
   }
 }
+
+@media (max-width: 600px) {
+  footer {
+    .footer_logo,
+    .footer-Company,
+    .footer-Support,
+    .footer-input {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .footer-Company,
+    .footer-Support {
+      ul {
+        padding-left: 10rem;
+      }
+    }
+  }
+}

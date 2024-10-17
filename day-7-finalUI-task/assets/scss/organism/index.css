@@ -8,6 +8,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 main {
@@ -24,11 +25,27 @@ main {
   color: #717171 !important;
 }
 
+@media (max-width: 600px) {
+  .client {
+    margin-top: 9rem;
+    height: 20rem;
+    background-color: #f5f7fa;
+  }
+  .client .client-logo-img {
+    width: 90%;
+    height: 10rem;
+  }
+}
 .system {
   height: 27rem;
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .system {
+    height: 80rem;
+  }
+}
 .pixelgrade {
   height: 27.063rem;
   margin-top: 7rem;
@@ -37,25 +54,106 @@ main {
   padding-bottom: 0;
 }
 
+@media (max-width: 600px) {
+  .pixelgrade {
+    height: 60rem;
+    margin-top: 2rem !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pixelgrade {
+    height: 50rem;
+    text-align: center;
+  }
+}
 .localbusiness-div {
   background-color: #f5f7fa;
   height: 19.875rem;
 }
 
+@media (max-width: 600px) {
+  .localbusiness-div {
+    height: 50rem;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .localbusiness-div {
+    height: 45rem;
+    text-align: center;
+  }
+}
 .design {
   margin-top: 2rem !important;
+  height: 35rem;
+}
+.design .pixel-sec-design {
+  justify-content: center;
+  height: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem !important;
+}
+.design .pixel-sec-design .pixel-sec-design__div {
+  width: 30%;
+  margin-left: 9rem;
+}
+.design .design-sec__data {
+  width: 51%;
+  padding-right: 4rem;
 }
 
+@media (max-width: 600px) {
+  .design {
+    flex-direction: column-reverse !important;
+    height: 80rem;
+  }
+  .design .design-sec__data {
+    width: 100%;
+    padding-right: 0;
+  }
+  .design .pixel-sec-design__div {
+    width: 100% !important;
+    margin-left: 0rem !important;
+  }
+  .design .pixel-sec-design {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: 70rem !important;
+    width: 90%;
+    gap: 5rem;
+    margin-top: 2rem !important;
+    padding: 2rem !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .design {
+    flex-direction: column-reverse !important;
+    height: 90rem;
+  }
+}
 .tesla-article {
   background-color: #f5f7fa;
   height: 24.375rem;
   margin-top: 2rem;
 }
 
+@media (max-width: 600px) {
+  .tesla-article {
+    height: 70rem;
+  }
+}
 .marketing {
   height: 31.625rem;
 }
 
+@media (max-width: 600px) {
+  .marketing {
+    height: 100rem;
+    position: relative;
+  }
+}
 .demo {
   height: 18.75rem;
   margin-top: 8rem;
@@ -71,6 +169,11 @@ main {
   padding: 0.8rem 2rem;
 }
 
+@media (max-width: 600px) {
+  .demo {
+    height: 30rem;
+  }
+}
 footer {
   height: 20.5rem;
   background-color: #263238;
@@ -80,4 +183,21 @@ footer section {
   display: flex;
   align-items: center;
   justify-content: first baseline;
+}
+
+@media (max-width: 600px) {
+  footer {
+    height: 80rem;
+  }
+  footer section {
+    flex-direction: column;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    height: 80rem;
+  }
+  footer section {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=index.css.map */

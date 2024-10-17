@@ -39,3 +39,28 @@
     // gap: 2rem;
   }
 }
+@media (max-width: 600px) {
+  .tesla-section {
+    flex-direction: column;
+
+    .tesla-section__left {
+      width: 100%;
+      margin-top: 3rem;
+      flex-direction: column;
+    }
+    .botton-tesla {
+      padding-top: 1rem;
+      flex-direction: column;
+      gap: 2rem;
+
+      .tesls-client-img {
+        width: 90%;
+      }
+    }
+
+    .tesla-section__right {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+}

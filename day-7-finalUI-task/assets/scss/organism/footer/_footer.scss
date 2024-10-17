@@ -12,3 +12,21 @@ footer {
     justify-content: first baseline;
   }
 }
+
+@media (max-width: 600px) {
+  footer {
+    height: 80rem;
+
+    section {
+      flex-direction: column;
+    }
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    height: 80rem;
+    section {
+      flex-direction: column;
+    }
+  }
+}

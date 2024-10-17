@@ -10,9 +10,8 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+
 
     <!-- bootstrap -->
 
@@ -25,27 +24,50 @@
 
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+        const navButtons = document.getElementById('nav-btn');
+
+        menuIcon.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+            navButtons.classList.toggle('active');
+        });
+    });
+
+
+</script>
+
 <body>
     <header class="container-fluid">
         <nav class="container">
-            <div class="logo"><img width="150px" src="assets/media/image/header/Logo.png" alt=""></div>
-            <div class="link">
+            <div class="logo">
+                <img width="150px" src="assets/media/image/header/Logo.png" alt="Logo">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="link" id="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#service">Service</a></li>
                     <li><a href="#feature">Feature</a></li>
-                    <li><a href="product">Product</a></li>
+                    <li><a href="#product">Product</a></li>
                     <li><a href="#testimonial">Testimonial</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
-            <div class="nav-btn">
-                <button style="background-color: #f5f7fa; color: #4caf4f;" class="nav_btn-1">Login</button>
-                <button style="color: white;" class="nav_btn-2">Sign up</button>
+            <div class="nav-btn" id="nav-btn">
+                <button class="nav_btn-1">Login</button>
+                <button class="nav_btn-2">Sign up</button>
             </div>
-
         </nav>
     </header>
+
+
 
     <main class="container-fluid">
 
@@ -111,14 +133,14 @@
     </article>
 
     <article class="localbusiness-div container-fluid">
-        <section class="container=fluid mx-auto container-sm local-div">
+        <section class="container local-div">
             <div class="local-div__left">
                 <h3 class="local-h3">Helping a local <br> <span style="color: #4caf4f;">business reinvent itself</span>
                 </h3>
                 <p>We reached here with our hard work and dedication</p>
             </div>
 
-            <div class="local-div__right d-grid">
+            <div class="local-div__right">
 
                 <div class="flex-left">
                     <div class="items">
@@ -157,13 +179,13 @@
         </section>
     </article>
 
-    <article class="pixelgrade container-fluid design">
-        <section class="container pixel-sec">
-            <div>
+    <article class="container-fluid design">
+        <section class="container pixel-sec-design">
+            <div class="pixel-sec-design__div">
                 <img class="pixel-sec__img" src="assets/media/image/design/pana.png" alt="">
             </div>
-            <div class="pixel-sec__data">
-                <h3>How to design your site footer like we did</h3>
+            <div class="design-sec__data">
+                <h3>How to design your site footer like <br> we did</h3>
                 <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa
                     nunc varius arcu,
                     at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea
@@ -200,7 +222,8 @@
                 <p class="last-para">British Dragon Boat Racing Association</p>
                 <div class="botton-tesla">
                     <img class="tesls-client-img" src="assets/media/image/tesla/Frame 10.png" alt="">
-                    <h5>Meet all customers <img src="assets/media/image/tesla/Right.png" alt=""></h5>
+                    <h5 style="cursor: pointer;">Meet all customers <img src="assets/media/image/tesla/Right.png"
+                            alt=""></h5>
                 </div>
             </div>
         </section>
@@ -214,10 +237,27 @@
             joining the
             community, read about how our community are increasing their membership income and lot's more.​</p>
 
-        <section class="system-box container market-box">
-            <div class="items-box system-box__item1 market-box__box">
+        <section class=" container market-box">
+            <div class="market-box__box">
                 <img class="market-img" src="assets/media/image/marketing/1.png" alt="">
-                <div class="market-box__box-divs">
+
+
+            </div>
+            <div class="market-box__box">
+                <img class="market-img" src="assets/media/image/marketing/2.png" alt="">
+
+
+            </div>
+            <div class="market-box__box">
+                <img class="market-img" src="assets/media/image/marketing/3.png" alt="">
+
+
+            </div>
+
+            <div class="glow-box">
+
+
+                <div class="market-box__box-divs item-1">
                     <h3>Creating Streamlined
                         Safeguarding Processes with
                         OneRen</h3>
@@ -228,10 +268,8 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="items-box system-box__item2 market-box__box">
-                <img class="market-img" src="assets/media/image/marketing/2.png" alt="">
-                <div class="market-box__box-divs">
+
+                <div class="market-box__box-divs item-2">
                     <h3>What are your safeguarding
                         responsibilities and how can
                         you manage them?</h3>
@@ -242,10 +280,8 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="items-box system-box__item3 market-box__box">
-                <img class="market-img" src="assets/media/image/marketing/3.png" alt="">
-                <div class="market-box__box-divs">
+
+                <div class="market-box__box-divs item-3">
                     <h3>Revamping the Membership
                         Model with Triathlon
                         Australia</h3>
@@ -256,7 +292,6 @@
 
                     </div>
                 </div>
-
             </div>
         </section>
 
