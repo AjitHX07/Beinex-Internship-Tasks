@@ -7,7 +7,8 @@ main {
 
 @media (min-width: 601px) and (max-width: 1024px) {
   main {
-    height: 80vh;
+    // margin-top: 6rem;
+    height: 116vh;
     background-color: $even_container_bg;
   }
 }

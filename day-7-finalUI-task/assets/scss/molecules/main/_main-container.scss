@@ -35,11 +35,12 @@ $paragraph_color: #717171;
 @media (min-width: 601px) and (max-width: 1024px) {
   .main_sect {
     flex-direction: column;
-    height: 61vh;
+    height: 69vh !important;
     padding: 0 2rem !important;
 
     h2 {
       font-size: 3.5rem !important;
+      margin-top: 18rem !important;
     }
   }
 }

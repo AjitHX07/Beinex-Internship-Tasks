@@ -4,12 +4,13 @@
   // background-color: rgb(86, 180, 180);
 
   .pixel-sec-design {
-    justify-content: center;
-    height: 50rem;
+    height: 36rem !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     padding: 2rem !important;
+
     .pixel-sec-design__div {
       width: 30%;
       margin-left: 9rem;
@@ -39,7 +40,7 @@
     .pixel-sec-design {
       flex-direction: column-reverse;
       justify-content: center;
-      height: 70rem !important;
+      height: 37rem !important;
       width: 90%;
       gap: 5rem;
       margin-top: 2rem !important;
@@ -51,8 +52,15 @@
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
     flex-direction: column !important;
-    height: 50rem;
+    height: 70rem;
     justify-content: space-between;
-    background-color: aqua;
+
+    .pixel-sec-design {
+      flex-direction: column;
+    }
+    .design-sec__data {
+      width: 100% !important;
+      margin-top: 4rem;
+    }
   }
 }

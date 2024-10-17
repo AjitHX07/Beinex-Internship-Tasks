@@ -306,11 +306,12 @@ input {
 @media (min-width: 601px) and (max-width: 1024px) {
   .main_sect {
     flex-direction: column;
-    height: 61vh;
+    height: 69vh !important;
     padding: 0 2rem !important;
   }
   .main_sect h2 {
     font-size: 3.5rem !important;
+    margin-top: 18rem !important;
   }
 }
 .system-box {
@@ -387,6 +388,7 @@ input {
     justify-content: center;
     height: 50rem;
     padding: 2rem !important;
+    max-width: 617px !important;
   }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -396,6 +398,9 @@ input {
     height: 50rem;
     width: 40%;
     padding: 2rem !important;
+  }
+  .pixel-sec__data {
+    width: 100%;
   }
 }
 .local-h3 {
@@ -519,8 +524,9 @@ p {
   }
 }
 .design .pixel-sec-design {
-  height: 30rem !important;
+  height: 62rem !important;
   display: flex;
+  flex-direction: column-reverse;
 }
 .design button,
 .design p {
@@ -542,6 +548,7 @@ p {
   .design .pixel-sec {
     flex-direction: column;
     justify-content: center;
+    display: flex !important;
     height: 50rem;
     padding: 2rem !important;
   }
@@ -556,6 +563,10 @@ p {
     height: 60rem;
   }
   .design .pixel-sec-design__div {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem !important;
     margin-left: 1rem !important;
   }
   .design .pixel-sec {
@@ -563,6 +574,9 @@ p {
     justify-content: center;
     height: 50rem;
     padding: 2rem !important;
+  }
+  .design .design-sec__data h3 {
+    margin-top: 2rem;
   }
   .design .pixel-sec__data {
     width: 90% !important;
@@ -624,6 +638,17 @@ p {
   .tesla-section .tesla-section__right {
     width: 100%;
     padding: 0 2rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    height: 40.375rem !important;
+  }
+  .tesla-section {
+    flex-direction: column;
+  }
+  .tesla-section__right {
+    padding: 0 14rem !important;
   }
 }
 .marketing h3 {
@@ -709,6 +734,32 @@ p {
     flex-direction: row;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .glow-box {
+    top: 346rem !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 18rem !important;
+  }
+  .market-box {
+    flex-direction: column !important;
+    gap: 10rem !important;
+  }
+  .market-box__box-divs {
+    width: 19rem;
+    border-radius: 8px;
+    position: absolute;
+    background-color: #f5f7fa;
+    height: 13rem;
+    top: 2rem;
+    padding: 0 16px;
+    box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px #f5f7fa;
+  }
+  .marketing p {
+    padding: 1rem !important;
+  }
+}
 .footer_logo,
 .footer-Company,
 .footer-Support,
@@ -780,6 +831,19 @@ p {
     padding-left: 10rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer .footer_logo,
+  footer .footer-Company,
+  footer .footer-Support,
+  footer .footer-input {
+    width: 100%;
+    flex-direction: column;
+  }
+  footer .footer-Company ul,
+  footer .footer-Support ul {
+    padding-left: 13.6rem;
+  }
+}
 header {
   background-color: #f5f7fa;
   height: 84px;
@@ -800,7 +864,7 @@ main {
 
 @media (min-width: 601px) and (max-width: 1024px) {
   main {
-    height: 80vh;
+    height: 116vh;
     background-color: #f5f7fa;
   }
 }
@@ -876,11 +940,11 @@ main {
   height: 35rem;
 }
 .design .pixel-sec-design {
-  justify-content: center;
-  height: 50rem;
+  height: 36rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 2rem !important;
 }
 .design .pixel-sec-design .pixel-sec-design__div {
@@ -908,7 +972,7 @@ main {
   .design .pixel-sec-design {
     flex-direction: column-reverse;
     justify-content: center;
-    height: 70rem !important;
+    height: 37rem !important;
     width: 90%;
     gap: 5rem;
     margin-top: 2rem !important;
@@ -918,9 +982,15 @@ main {
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
     flex-direction: column !important;
-    height: 50rem;
+    height: 70rem;
     justify-content: space-between;
-    background-color: aqua;
+  }
+  .design .pixel-sec-design {
+    flex-direction: column;
+  }
+  .design .design-sec__data {
+    width: 100% !important;
+    margin-top: 4rem;
   }
 }
 .tesla-article {
@@ -934,6 +1004,13 @@ main {
     height: 70rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    width: 100%;
+    height: 50.375rem !important;
+    padding: 0 3rem;
+  }
+}
 .marketing {
   height: 31.625rem;
 }
@@ -942,6 +1019,11 @@ main {
   .marketing {
     height: 100rem;
     position: relative;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .marketing {
+    height: 100rem;
   }
 }
 .demo {

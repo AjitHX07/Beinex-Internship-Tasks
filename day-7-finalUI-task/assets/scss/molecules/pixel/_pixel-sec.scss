@@ -28,6 +28,7 @@ $paragraph_color: #717171;
     justify-content: center;
     height: 50rem;
     padding: 2rem !important;
+    max-width: 617px !important;
   }
 }
 
@@ -41,5 +42,6 @@ $paragraph_color: #717171;
   }
 
   .pixel-sec__data {
+    width: 100%;
   }
 }

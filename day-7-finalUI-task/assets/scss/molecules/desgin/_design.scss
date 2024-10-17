@@ -1,8 +1,8 @@
 .design {
   .pixel-sec-design {
-    height: 30rem !important;
+    height: 62rem !important;
     display: flex;
-    // background-color: aqua !important;
+    flex-direction: column-reverse;
   }
 
   button,
@@ -30,6 +30,7 @@
     .pixel-sec {
       flex-direction: column;
       justify-content: center;
+      display: flex !important;
       height: 50rem;
       padding: 2rem !important;
     }
@@ -45,6 +46,10 @@
     flex-direction: column-reverse !important;
     height: 60rem;
     .pixel-sec-design__div {
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5rem !important;
       margin-left: 1rem !important;
     }
     .pixel-sec {
@@ -53,6 +58,13 @@
       height: 50rem;
       padding: 2rem !important;
     }
+    .design-sec__data {
+      // width: 139% !important;
+      h3 {
+        margin-top: 2rem;
+      }
+    }
+
     .pixel-sec__data {
       width: 90% !important;
       background-color: aqua;

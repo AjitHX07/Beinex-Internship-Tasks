@@ -18,7 +18,7 @@ main {
 
 @media (min-width: 601px) and (max-width: 1024px) {
   main {
-    height: 80vh;
+    height: 116vh;
     background-color: #f5f7fa;
   }
 }
@@ -94,11 +94,11 @@ main {
   height: 35rem;
 }
 .design .pixel-sec-design {
-  justify-content: center;
-  height: 50rem;
+  height: 36rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 2rem !important;
 }
 .design .pixel-sec-design .pixel-sec-design__div {
@@ -126,7 +126,7 @@ main {
   .design .pixel-sec-design {
     flex-direction: column-reverse;
     justify-content: center;
-    height: 70rem !important;
+    height: 37rem !important;
     width: 90%;
     gap: 5rem;
     margin-top: 2rem !important;
@@ -136,9 +136,15 @@ main {
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
     flex-direction: column !important;
-    height: 50rem;
+    height: 70rem;
     justify-content: space-between;
-    background-color: aqua;
+  }
+  .design .pixel-sec-design {
+    flex-direction: column;
+  }
+  .design .design-sec__data {
+    width: 100% !important;
+    margin-top: 4rem;
   }
 }
 .tesla-article {
@@ -152,6 +158,13 @@ main {
     height: 70rem;
   }
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    width: 100%;
+    height: 50.375rem !important;
+    padding: 0 3rem;
+  }
+}
 .marketing {
   height: 31.625rem;
 }
@@ -160,6 +173,11 @@ main {
   .marketing {
     height: 100rem;
     position: relative;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .marketing {
+    height: 100rem;
   }
 }
 .demo {

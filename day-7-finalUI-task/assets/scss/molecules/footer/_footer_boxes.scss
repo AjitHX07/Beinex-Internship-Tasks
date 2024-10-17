@@ -83,3 +83,22 @@ $link_color: #d9dbe1;
     }
   }
 }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    .footer_logo,
+    .footer-Company,
+    .footer-Support,
+    .footer-input {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .footer-Company,
+    .footer-Support {
+      ul {
+        padding-left: 13.6rem;
+      }
+    }
+  }
+}

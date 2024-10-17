@@ -102,3 +102,35 @@ $even_container_bg: #f5f7fa;
     }
   }
 }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .glow-box {
+    top: 346rem !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 18rem !important;
+  }
+
+  .market-box {
+    flex-direction: column !important;
+    gap: 10rem !important;
+  }
+
+  .market-box__box-divs {
+    width: 19rem;
+    border-radius: 8px;
+    position: absolute;
+    background-color: $even_container_bg;
+    height: 13rem;
+    top: 2rem;
+    padding: 0 16px;
+    box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px $even_container_bg;
+  }
+
+  .marketing {
+    p {
+      padding: 1rem !important;
+    }
+  }
+}

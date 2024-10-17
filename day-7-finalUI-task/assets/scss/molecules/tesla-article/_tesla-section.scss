@@ -64,3 +64,16 @@
     }
   }
 }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    height: 40.375rem !important;
+  }
+
+  .tesla-section {
+    flex-direction: column;
+  }
+  .tesla-section__right {
+    padding: 0 14rem !important;
+  }
+}
