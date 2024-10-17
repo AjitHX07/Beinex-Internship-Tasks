@@ -302,6 +302,9 @@ input {
   .main_sect h2 {
     font-size: 3.5rem !important;
   }
+  .main_sect img {
+    margin-top: 4rem;
+  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .main_sect {
@@ -410,8 +413,8 @@ input {
 }
 
 p {
+  color: #717171 !important;
   margin: 0 !important;
-  color: black !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -862,6 +865,11 @@ main {
   background-color: #f5f7fa;
 }
 
+@media (max-width: 600px) {
+  main {
+    height: 110vh;
+  }
+}
 @media (min-width: 601px) and (max-width: 1024px) {
   main {
     height: 116vh;
@@ -959,7 +967,7 @@ main {
 @media (max-width: 600px) {
   .design {
     flex-direction: column-reverse !important;
-    height: 80rem;
+    height: 70rem;
   }
   .design .design-sec__data {
     width: 100%;
@@ -972,11 +980,14 @@ main {
   .design .pixel-sec-design {
     flex-direction: column-reverse;
     justify-content: center;
-    height: 37rem !important;
+    height: 69rem !important;
     width: 90%;
     gap: 5rem;
     margin-top: 2rem !important;
     padding: 2rem !important;
+  }
+  .design .pixel-sec-design p {
+    color: #717171 !important;
   }
 }
 @media (min-width: 601px) and (max-width: 1024px) {

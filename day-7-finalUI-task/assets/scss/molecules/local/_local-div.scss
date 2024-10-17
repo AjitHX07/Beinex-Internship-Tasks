@@ -1,3 +1,5 @@
+$paragraph_color: #717171;
+
 .local-h3 {
   font-weight: 600 !important;
   font-size: 3rem !important;
@@ -5,8 +7,8 @@
 }
 
 p {
+  color: $paragraph_color !important;
   margin: 0 !important;
-  color: black !important;
   margin: 0 !important;
   padding: 0 !important;
 }

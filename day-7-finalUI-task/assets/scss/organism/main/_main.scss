@@ -5,6 +5,12 @@ main {
   background-color: $even_container_bg;
 }
 
+@media (max-width: 600px) {
+  main {
+    height: 110vh;
+  }
+}
+
 @media (min-width: 601px) and (max-width: 1024px) {
   main {
     // margin-top: 6rem;

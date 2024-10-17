@@ -173,6 +173,9 @@
   .main_sect h2 {
     font-size: 3.5rem !important;
   }
+  .main_sect img {
+    margin-top: 4rem;
+  }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .main_sect {
@@ -281,8 +284,8 @@
 }
 
 p {
+  color: #717171 !important;
   margin: 0 !important;
-  color: black !important;
   margin: 0 !important;
   padding: 0 !important;
 }
