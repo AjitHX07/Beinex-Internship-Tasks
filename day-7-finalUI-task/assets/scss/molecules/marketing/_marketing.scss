@@ -1,0 +1,49 @@
+$paragraph_color: #717171;
+$even_container_bg: #f5f7fa;
+
+.marketing {
+  h3 {
+    margin-top: 2rem;
+  }
+  p {
+    padding: 0 26rem !important;
+    margin-top: 1% !important;
+    color: $paragraph_color !important;
+  }
+
+  .market-box {
+    margin-top: 5rem;
+  }
+
+  .market-box__box {
+    background-color: aquamarine;
+
+    .market-box__box-divs {
+      width: 19rem;
+      border-radius: 8px;
+      position: absolute;
+      background-color: $even_container_bg;
+      height: 11rem;
+      top: 222rem;
+      padding: 0 16px;
+      box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px $even_container_bg;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+
+      h3 {
+        font-size: 20px !important;
+        line-height: 1.9rem;
+        margin-top: 0 !important;
+        margin-bottom: -1rem !important;
+      }
+    }
+    p {
+      padding: 0 !important ;
+    }
+  }
+}

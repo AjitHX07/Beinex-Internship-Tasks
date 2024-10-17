@@ -1,0 +1,11 @@
+$paragraph_color: #717171;
+
+.client {
+  height: 12.875rem;
+  text-align: center;
+
+  p {
+    padding: 0rem;
+    color: $paragraph_color !important;
+  }
+}

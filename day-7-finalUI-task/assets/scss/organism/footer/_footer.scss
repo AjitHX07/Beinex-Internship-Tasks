@@ -1,0 +1,14 @@
+$footer_bg: #263238;
+
+footer {
+  height: 20.5rem;
+  background-color: $footer_bg;
+
+  color: white !important;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+  }
+}

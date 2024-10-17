@@ -1,0 +1,495 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  font-size: 16;
+  font-style: normal;
+  text-decoration: none;
+}
+
+a {
+  color: #18191f !important;
+  text-decoration: none !important;
+}
+
+button {
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 6px !important;
+  background-color: #4caf4f;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 50rem;
+}
+
+.main-image {
+  width: 24em;
+  height: 23rem;
+}
+
+.client-logo-img {
+  margin: 0;
+}
+
+.pixel-img {
+  width: 27.596rem;
+  height: 20.562rem;
+}
+
+.local-img {
+  width: 50px;
+  height: 40px;
+}
+
+.pixel-sec__img {
+  width: 23.596rem;
+  height: 23.562rem;
+}
+
+.tesls-client-img {
+  width: 60%;
+}
+
+.tesla-img {
+  width: 21.375rem;
+  height: 21rem;
+}
+
+.market-img {
+  width: 23rem;
+}
+
+.footer_logo__img {
+  width: 11.938rem !important;
+  height: 1.854rem;
+  margin-top: 4rem;
+}
+
+.footer-send-img {
+  position: relative;
+  bottom: 1.8rem;
+  left: 6.6rem;
+}
+
+h1 {
+  color: #263238 !important;
+  font-weight: 600 !important;
+  font-size: 4rem !important;
+}
+
+h2 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  color: #4d4d4d !important;
+}
+
+h3 {
+  color: #4d4d4d !important;
+  font-size: 2.25rem !important;
+  padding: 1rem 0;
+  font-weight: 600 !important;
+}
+
+h4 {
+  font-weight: 700 !important;
+  padding: 1.2rem 2.1rem;
+  font-size: 1.75rem;
+}
+
+h5 {
+  color: #4caf4f !important;
+  margin: 0.7rem 0 !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+}
+
+p {
+  color: #717171 !important;
+  padding: 1rem 0;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  background-color: #515b60;
+  width: 15.938rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  margin-left: 2.5rem !important;
+  margin-top: 2rem !important;
+  color: #cccfd5;
+}
+
+.nav-btn-1 {
+  background-color: white !important;
+  color: #4caf4f;
+  margin-right: 1rem;
+}
+
+.main_sect {
+  padding: 0 rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 35rem;
+}
+.main_sect h2 {
+  margin-top: 2rem;
+}
+.main_sect p {
+  color: #717171 !important;
+}
+
+.main_sect-btn {
+  color: white !important;
+  padding: 1rem 2.3rem;
+  margin-top: 1.5rem;
+}
+
+.system-box {
+  height: 70%;
+  margin-top: 1rem !important;
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  align-items: first baseline;
+}
+.system-box p {
+  padding: 0.5rem !important;
+  color: #717171 !important;
+}
+.system-box .items-box {
+  width: 18.75rem;
+  border-radius: 8px;
+  height: 17.75rem;
+  border-left: 4px #fafbfc solid;
+  border-right: 4px #fafbfc solid;
+  border-bottom: 4px #fafbfc solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h3 {
+  padding-top: 2rem !important;
+  margin-top: 3rem !important;
+}
+
+.pixel-sec {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+}
+.pixel-sec p {
+  margin-top: 1.5rem !important;
+  color: #717171 !important;
+}
+.pixel-sec button {
+  padding: 0.8rem 2rem;
+  margin: 2rem 0;
+}
+.pixel-sec.pixel-sec {
+  height: 90%;
+  padding: 10rem;
+}
+
+.local-h3 {
+  font-weight: 600 !important;
+  font-size: 3rem !important;
+  margin-top: 3rem;
+}
+
+p {
+  margin: 0 !important;
+  color: black !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.local-div {
+  height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.local-div .local-div__left {
+  width: 80%;
+  height: 100%;
+  margin-right: 1rem;
+}
+.local-div .local-div__right {
+  width: 60%;
+  height: 100%;
+  margin-top: 3.4rem;
+  display: flex;
+  margin-right: 14rem;
+}
+.local-div .local-div__right .items {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 9rem;
+  display: flex;
+  gap: 2rem;
+}
+.local-div .local-div__right .items p {
+  margin: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: gray !important;
+}
+.local-div .local-div__right .items.hp {
+  display: flex;
+  flex-direction: column;
+}
+.local-div .local-div__right h3 {
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 0;
+}
+.local-div .local-div__right .flex-right {
+  position: relative;
+  bottom: 3rem;
+}
+.local-div .local-div__right .flex-right,
+.local-div .local-div__right .flex-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.design .pixel-sec {
+  flex-direction: row !important;
+}
+.design .pixel-sec button,
+.design .pixel-sec p {
+  margin-top: 2.5rem;
+}
+.design .pixel-sec.data p {
+  padding-top: 2.5rem !important;
+}
+
+.tesla-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.tesla-section p {
+  color: #717171 !important;
+  padding-right: 3rem !important;
+  margin-top: 2.5rem !important;
+  font-weight: 600;
+}
+.tesla-section .last-para {
+  margin: 0 !important;
+  font-weight: 400;
+}
+.tesla-section .tesla-section__left {
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  align-items: center;
+}
+.tesla-section .tesla-section__right {
+  width: 70rem;
+  height: 25rem;
+  padding-left: 6rem;
+}
+.tesla-section .botton-tesla {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.marketing h3 {
+  margin-top: 2rem;
+}
+.marketing p {
+  padding: 0 26rem !important;
+  margin-top: 1% !important;
+  color: #717171 !important;
+}
+.marketing .market-box {
+  margin-top: 5rem;
+}
+.marketing .market-box__box {
+  background-color: aquamarine;
+}
+.marketing .market-box__box .market-box__box-divs {
+  width: 19rem;
+  border-radius: 8px;
+  position: absolute;
+  background-color: #f5f7fa;
+  height: 11rem;
+  top: 222rem;
+  padding: 0 16px;
+  box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px #f5f7fa;
+}
+.marketing .market-box__box .market-box__box-divs div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.marketing .market-box__box .market-box__box-divs h3 {
+  font-size: 20px !important;
+  line-height: 1.9rem;
+  margin-top: 0 !important;
+  margin-bottom: -1rem !important;
+}
+.marketing .market-box__box p {
+  padding: 0 !important;
+}
+
+.footer_logo,
+.footer-Company,
+.footer-Support,
+.footer-input {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 20rem;
+}
+
+.footer_logo {
+  color: white !important;
+}
+.footer_logo .social-grp {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem !important;
+  flex-direction: row;
+}
+.footer_logo .social-grp .socail-grid__round {
+  border-radius: 100%;
+  background-color: #3b464c;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+
+.footer-Support h6,
+.footer-Company h6 {
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+.footer-Support ul,
+.footer-Company ul {
+  flex-direction: column;
+  padding-left: 8rem;
+  align-items: start !important;
+  width: 100%;
+  gap: 0.6rem;
+  align-items: center;
+}
+.footer-Support ul li,
+.footer-Company ul li {
+  color: #d9dbe1;
+  font-size: 14px !important;
+}
+
+.footer-input h5 {
+  font-weight: 600 !important;
+  font-size: 1.8rem !important;
+  margin-top: 4rem !important;
+  color: white !important;
+}
+
+header {
+  background-color: #f5f7fa;
+  height: 84px;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  height: 90vh;
+  background-color: #f5f7fa;
+}
+
+.client {
+  height: 12.875rem;
+  text-align: center;
+}
+.client p {
+  padding: 0rem;
+  color: #717171 !important;
+}
+
+.system {
+  height: 27rem;
+  text-align: center;
+}
+
+.pixelgrade {
+  height: 27.063rem;
+  margin-top: 7rem;
+}
+.pixelgrade h3 {
+  padding-bottom: 0;
+}
+
+.localbusiness-div {
+  background-color: #f5f7fa;
+  height: 19.875rem;
+}
+
+.design {
+  margin-top: 2rem !important;
+}
+
+.tesla-article {
+  background-color: #f5f7fa;
+  height: 24.375rem;
+  margin-top: 2rem;
+}
+
+.marketing {
+  height: 31.625rem;
+}
+
+.demo {
+  height: 18.75rem;
+  margin-top: 8rem;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+.demo h1 {
+  padding-top: 3rem;
+}
+.demo button {
+  color: #f5f7fa;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+footer {
+  height: 20.5rem;
+  background-color: #263238;
+  color: white !important;
+}
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+}/*# sourceMappingURL=style.css.map */

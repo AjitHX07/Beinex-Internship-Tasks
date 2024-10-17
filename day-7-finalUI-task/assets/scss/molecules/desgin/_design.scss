@@ -1,0 +1,16 @@
+.design {
+  .pixel-sec {
+    flex-direction: row !important;
+
+    button,
+    p {
+      margin-top: 2.5rem;
+    }
+
+    &.data {
+      p {
+        padding-top: 2.5rem !important;
+      }
+    }
+  }
+}

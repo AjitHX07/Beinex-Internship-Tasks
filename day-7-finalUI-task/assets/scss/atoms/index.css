@@ -1,0 +1,117 @@
+a {
+  color: #18191f !important;
+  text-decoration: none !important;
+}
+
+button {
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 6px !important;
+  background-color: #4caf4f;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 50rem;
+}
+
+.main-image {
+  width: 24em;
+  height: 23rem;
+}
+
+.client-logo-img {
+  margin: 0;
+}
+
+.pixel-img {
+  width: 27.596rem;
+  height: 20.562rem;
+}
+
+.local-img {
+  width: 50px;
+  height: 40px;
+}
+
+.pixel-sec__img {
+  width: 23.596rem;
+  height: 23.562rem;
+}
+
+.tesls-client-img {
+  width: 60%;
+}
+
+.tesla-img {
+  width: 21.375rem;
+  height: 21rem;
+}
+
+.market-img {
+  width: 23rem;
+}
+
+.footer_logo__img {
+  width: 11.938rem !important;
+  height: 1.854rem;
+  margin-top: 4rem;
+}
+
+.footer-send-img {
+  position: relative;
+  bottom: 1.8rem;
+  left: 6.6rem;
+}
+
+h1 {
+  color: #263238 !important;
+  font-weight: 600 !important;
+  font-size: 4rem !important;
+}
+
+h2 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  color: #4d4d4d !important;
+}
+
+h3 {
+  color: #4d4d4d !important;
+  font-size: 2.25rem !important;
+  padding: 1rem 0;
+  font-weight: 600 !important;
+}
+
+h4 {
+  font-weight: 700 !important;
+  padding: 1.2rem 2.1rem;
+  font-size: 1.75rem;
+}
+
+h5 {
+  color: #4caf4f !important;
+  margin: 0.7rem 0 !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+}
+
+p {
+  color: #717171 !important;
+  padding: 1rem 0;
+}
+
+input {
+  border: none;
+  border-radius: 8px;
+  background-color: #515b60;
+  width: 15.938rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  margin-left: 2.5rem !important;
+  margin-top: 2rem !important;
+  color: #cccfd5;
+}/*# sourceMappingURL=index.css.map */

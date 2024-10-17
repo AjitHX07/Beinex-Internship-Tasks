@@ -1,0 +1,25 @@
+$paragraph_color: #717171;
+
+.pixel-sec {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+
+  p {
+    margin-top: 1.5rem !important;
+    color: $paragraph_color !important;
+  }
+
+  button {
+    padding: 0.8rem 2rem;
+    margin: 2rem 0;
+  }
+  &.pixel-sec {
+    // background-color: aquamarine;
+    // width: 60%;
+    height: 90%;
+    padding: 10rem;
+  }
+}
