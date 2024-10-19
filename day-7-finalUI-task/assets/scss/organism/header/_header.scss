@@ -1,4 +1,5 @@
 $even_container_bg: #f5f7fa;
+$accent_color: #4caf4f;
 
 header {
   background-color: $even_container_bg;
@@ -11,5 +12,15 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    .navBtn {
+      display: flex;
+      gap: 1rem;
+      &__login {
+        background-color: $even_container_bg !important;
+        color: $accent_color !important;
+        margin-right: 7rem;
+      }
+    }
   }
 }

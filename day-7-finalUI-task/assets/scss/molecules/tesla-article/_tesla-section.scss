@@ -1,34 +1,37 @@
+$paragraph_color: #717171;
+
 .tesla-section {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 
-  p {
-    color: #717171 !important;
-    padding-right: 3rem !important;
-    margin-top: 2.5rem !important;
-    font-weight: 600;
-  }
-
-  .last-para {
-    margin: 0 !important;
-    font-weight: 400;
-  }
-
-  .tesla-section__left {
+  &__left {
     display: flex;
     justify-content: center;
-    // background-color: rgb(204, 220, 220) !important;
-    width: 30rem;
+    width: 43rem;
     align-items: center;
   }
 
-  .tesla-section__right {
+  p {
+    color: $paragraph_color !important;
+    padding-right: 1rem !important;
+    margin-top: 2rem !important;
+  }
+
+  &__right {
     width: 70rem;
     height: 25rem;
-    padding-left: 6rem;
-    // background-color: aqua;
+
+    &__name {
+      margin-top: 1.5rem !important;
+    }
+
+    &__last-para {
+      margin: 0 !important;
+      font-weight: 400;
+      margin-top: 1rem !important;
+    }
   }
 
   .botton-tesla {
@@ -36,14 +39,13 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
-    // gap: 2rem;
   }
 }
 @media (max-width: 600px) {
   .tesla-section {
     flex-direction: column;
 
-    .tesla-section__left {
+    &__left {
       width: 100%;
       margin-top: 3rem;
       flex-direction: column;
@@ -58,7 +60,7 @@
       }
     }
 
-    .tesla-section__right {
+    &__right {
       width: 100%;
       padding: 0 2rem;
     }
@@ -72,8 +74,12 @@
 
   .tesla-section {
     flex-direction: column;
-  }
-  .tesla-section__right {
-    padding: 0 14rem !important;
+    &__left {
+      margin-top: 2.5rem;
+    }
+
+    &__right {
+      padding: 0 15rem !important;
+    }
   }
 }

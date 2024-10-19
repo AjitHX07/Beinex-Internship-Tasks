@@ -1,74 +1,89 @@
 .design {
-  .pixel-sec-design {
-    height: 62rem !important;
+  &__sections {
+    height: 34rem !important;
     display: flex;
-    flex-direction: column-reverse;
-  }
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem !important;
 
-  button,
-  p {
-    margin-top: 2.5rem;
-  }
+    &__img-div {
+      width: 35% !important;
+    }
+    &__data {
+      width: 60%;
+      height: 100%;
+      padding: 4rem;
 
-  &.data {
-    p {
-      padding-top: 2.5rem !important;
+      button {
+        padding: 1rem 2.4rem;
+      }
+
+      button,
+      p {
+        margin-top: 2rem;
+        font-size: 14px;
+      }
     }
   }
 }
 
 @media (max-width: 600px) {
   .design {
-    flex-direction: column-reverse !important;
-    height: 60rem;
-
-    .pixel-sec-design {
-      height: 70rem !important;
-      margin: 0 !important;
-    }
-
-    .pixel-sec {
-      flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__sections {
+      flex-direction: column-reverse;
+      gap: 4rem;
       justify-content: center;
-      display: flex !important;
-      height: 50rem;
-      padding: 2rem !important;
-    }
-    .pixel-sec__data {
-      width: 80% !important;
-      background-color: aqua;
+      align-items: center;
+
+      &__img-div {
+        width: 100% !important;
+        margin-right: 4rem !important;
+      }
+
+      &__data {
+        width: 100% !important;
+        padding: 0;
+        height: 40rem;
+      }
+
+      .pixel-sec-design__div {
+        width: 100% !important;
+        margin-left: 0rem !important;
+      }
+
+      .pixel-sec-design {
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 69rem !important;
+        width: 90%;
+        gap: 5rem;
+        margin-top: 2rem !important;
+        padding: 2rem !important;
+
+        p {
+          color: $paragraph_color !important;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .design {
-    flex-direction: column-reverse !important;
-    height: 60rem;
-    .pixel-sec-design__div {
-      width: 100% !important;
-      display: flex;
+    flex-direction: column !important;
+    height: 70rem;
+    justify-content: space-between;
+
+    .pixel-sec-design {
       flex-direction: column;
-      margin-bottom: 5rem !important;
-      margin-left: 1rem !important;
-    }
-    .pixel-sec {
-      flex-direction: row;
-      justify-content: center;
-      height: 50rem;
-      padding: 2rem !important;
     }
     .design-sec__data {
-      // width: 139% !important;
-      h3 {
-        margin-top: 2rem;
-      }
-    }
-
-    .pixel-sec__data {
-      width: 90% !important;
-      background-color: aqua;
-      padding-right: 0 !important;
+      width: 100% !important;
+      margin-top: 4rem;
     }
   }
 }

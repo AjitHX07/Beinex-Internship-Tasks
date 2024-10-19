@@ -21,3 +21,9 @@ $even_container_bg: #f5f7fa;
     height: 30rem;
   }
 }
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .demo {
+    height: 26rem !important;
+  }
+}

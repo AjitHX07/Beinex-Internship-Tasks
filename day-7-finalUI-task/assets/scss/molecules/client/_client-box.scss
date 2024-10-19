@@ -1,0 +1,50 @@
+.client {
+  &__img-box {
+    width: 90%;
+    height: 6rem;
+    // background-color: aqua;
+    display: flex;
+    gap: 8.5rem;
+    align-items: center;
+    justify-content: center;
+
+    &__box-1,
+    &__box-2 {
+      display: flex;
+      gap: 8.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .client {
+    &__img-box {
+      flex-direction: column;
+      margin-top: 1rem;
+      gap: 2rem;
+      height: 10rem;
+
+      &__box-1,
+      &__box-2 {
+        gap: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .client {
+    &__img-box {
+      gap: 2.5rem !important;
+
+      &__box-1,
+      &__box-2 {
+        gap: 2.5rem;
+      }
+    }
+  }
+}

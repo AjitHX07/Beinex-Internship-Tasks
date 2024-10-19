@@ -16,49 +16,50 @@ $even_container_bg: #f5f7fa;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 1.4rem;
   }
 
   .glow-box {
     width: 90%;
     height: 14rem;
     display: flex;
-    gap: 7.5rem;
-    top: 230rem;
+    gap: 3.5rem;
+    top: 235rem;
     justify-content: center;
     position: absolute;
 
-    .market-box__box-divs {
+    &__divs {
       width: 19rem;
       border-radius: 8px;
-      // position: absolute;
       background-color: $even_container_bg;
       height: 11rem;
-      // top: 222rem;
       padding: 0 16px;
+      color: $paragraph_color !important;
+      transition: all 100ms ease-in;
       box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px $even_container_bg;
-
+      &:hover {
+        transform: scale(1.01);
+      }
       div {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 0.5rem;
       }
 
       h3 {
         font-size: 20px !important;
         line-height: 1.9rem;
         margin-top: 0 !important;
+        color: $paragraph_color !important;
         margin-bottom: -1rem !important;
       }
-    }
-  }
-
-  .market-box__box {
-    background-color: aquamarine;
-
-    p {
-      padding: 0 !important ;
+      h5,
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -70,17 +71,7 @@ $even_container_bg: #f5f7fa;
     }
 
     .system-box {
-      margin-top: 7rem !important;
-      .market-box__box-divs {
-        width: 19rem;
-        border-radius: 8px;
-        position: absolute;
-        background-color: $even_container_bg;
-        height: 13rem;
-        top: 2rem;
-        padding: 0 16px;
-        box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px $even_container_bg;
-      }
+      margin-top: 2rem !important;
     }
 
     .market-box {
@@ -94,18 +85,12 @@ $even_container_bg: #f5f7fa;
       align-items: center;
       gap: 18rem;
     }
-
-    .market-box__box-divs {
-      div {
-        flex-direction: row;
-      }
-    }
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .glow-box {
-    top: 346rem !important;
+    top: 359rem !important;
     flex-direction: column !important;
     justify-content: center;
     align-items: center;
@@ -115,17 +100,7 @@ $even_container_bg: #f5f7fa;
   .market-box {
     flex-direction: column !important;
     gap: 10rem !important;
-  }
-
-  .market-box__box-divs {
-    width: 19rem;
-    border-radius: 8px;
-    position: absolute;
-    background-color: $even_container_bg;
-    height: 13rem;
-    top: 2rem;
-    padding: 0 16px;
-    box-shadow: 28px -1px 49px #b1b1b1, 0 12px 22px $even_container_bg;
+    margin-top: 3rem !important;
   }
 
   .marketing {

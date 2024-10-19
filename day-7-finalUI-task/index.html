@@ -42,14 +42,19 @@
 <body>
     <header class="container-fluid">
         <nav class="container">
+
+            <!-- logo part -->
             <div class="logo">
-                <img width="150px" src="assets/media/image/header/Logo.png" alt="Logo">
+                <img width="150px" style="cursor: pointer;" src="assets/media/image/header/Logo.svg" alt="Logo">
             </div>
+
+            <!-- menu icon -->
             <div class="menu-icon" id="menu-icon">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
             <div class="link" id="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -60,65 +65,91 @@
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
+
+            <!-- btn Groups -->
             <div class="nav-btn" id="nav-btn">
-                <button class="nav_btn-1">Login</button>
-                <button class="nav_btn-2">Sign up</button>
+                <button class="nav-btn__login">Login</button>
+                <button class="nav-btn__signup">Sign up</button>
             </div>
         </nav>
     </header>
 
-
-
     <main class="container-fluid">
 
         <section class="main_sect container">
+
+            <!-- heading part -->
             <div class="main_sect__data">
                 <h2>Lessons and insights <br><span style="color: #4caf4f;">from 8 years</span></h2>
                 <p>Where to grow your business as a photographer: site or social media?</p>
-                <button class="main_sect-btn">Register</button>
+                <button class="main_sect__btn">Register</button>
             </div>
-            <div class="main_sect__img"><img class="main-image" src="assets/media/image/main/Illustration.png" alt="">
+            <!-- img part -->
+            <div class="main_sect__img">
+                <img class="main-image" src="assets/media/image/main/Illustration.svg" alt="Illustration of hero page">
             </div>
+
         </section>
     </main>
 
     <article class="client container-fluid ">
         <h3>Our Clients</h3>
         <p>We have been working with some Fortune 500+ clients</p>
-        <img class="client-logo-img" src="assets/media/image/client/Clients Logos.svg" alt="">
+        <!-- <img class="client-logo-img" src="assets/media/image/client/Clients Logos.svg" alt=""> -->
+        <section class="client__img-box mx-auto">
+            <!-- box-1 -->
+            <div class="client__img-box__box-1">
+                <img src="assets/media/image/client/logo-1.svg" alt="">
+                <img src="assets/media/image/client/logo-2.svg" alt="">
+                <img src="assets/media/image/client/logo-3.svg" alt="">
+            </div>
+            <!-- box-2 -->
+            <div class="client__img-box__box-2">
+                <img src="assets/media/image/client/logo-4.svg" alt="">
+                <img src="assets/media/image/client/logo-5.svg" alt="">
+                <img src="assets/media/image/client/logo-6.svg" alt="">
+                <img src="assets/media/image/client/logo-7.svg" alt="">
+            </div>
+        </section>
     </article>
 
     <article class="system container-fluid">
-        <h3 class="h3">Manage your entire community <br> in a single system</h3>
-        <p class="my-2" style="color: #717171 !important;">Who is Nextcent suitable for?
-        </p>
 
+        <h3 class="h3">Manage your entire community <br> in a single system</h3>
+        <p class="my-2" style="color: #717171 !important;">Who is Nextcent suitable for?</p>
+
+        <!-- box sectio -->
         <section class="system-box container">
             <div class="items-box system-box__item1">
                 <img src="assets/media/image/system/Icon-1.svg" alt="">
                 <h4>Membership Organisations</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit commodi at doloremque
-                    adipisci delectus</p>
+                    adipisci </p>
             </div>
             <div class="items-box system-box__item2">
                 <img src="assets/media/image/system/Icon-2.svg" alt="">
                 <h4>National Associations</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit commodi at doloremque
-                    adipisci delectus</p>
+                    adipisci </p>
             </div>
             <div class="items-box system-box__item3">
                 <img src="assets/media/image/system/Icon-3.svg" alt="">
                 <h4>Clubs And Groups</h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit commodi at doloremque
-                    adipisci delectus</p>
+                    adipisci </p>
             </div>
         </section>
 
     </article>
 
     <article class="pixelgrade container-fluid">
-        <section class="container pixel-sec">
-            <div><img class="pixel-img" src="assets/media/image/pixels/pixel.svg" alt=""></div>
+        <section class="container pixelgrade__section">
+
+            <div>
+                <img class="pixel-img" src="assets/media/image/pixels/pixel.svg" alt="">
+            </div>
+
+            <!-- text data section -->
             <div class="pixel-sec__data">
                 <h3>The unseen of spending three years at Pixelgrade</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
@@ -127,6 +158,7 @@
                     pulvinar sit amet
                     risus pretium auc elementum.
                 </p>
+
                 <button class="main_sect-btn">Learn More</button>
             </div>
         </section>
@@ -134,12 +166,16 @@
 
     <article class="localbusiness-div container-fluid">
         <section class="container local-div">
+
+            <!-- heading part -->
             <div class="local-div__left">
-                <h3 class="local-h3">Helping a local <br> <span style="color: #4caf4f;">business reinvent itself</span>
+                <h3 class="local-div__left__h3">Helping a local <br> <span style="color: #4caf4f;">business reinvent
+                        itself</span>
                 </h3>
                 <p>We reached here with our hard work and dedication</p>
             </div>
 
+            <!-- items flexbox -->
             <div class="local-div__right mx-auto">
 
                 <div class="flex-left">
@@ -163,7 +199,7 @@
                 <div class="flex-right">
                     <div class="items"><img class="local-img" src="assets/media/image/local/Icon-3.png" alt="">
                         <div class="items__hp">
-                            <h3>828,867</h3>
+                            <h3 class="items__h-3">828,867</h3>
                             <p>Event Bookings</p>
                         </div>
                     </div>
@@ -180,11 +216,18 @@
     </article>
 
     <article class="container-fluid design">
-        <section class="container pixel-sec-design">
-            <div class="pixel-sec-design__div">
-                <img class="pixel-sec__img" src="assets/media/image/design/pana.png" alt="">
+
+        <section class="container design__sections">
+
+            <!-- img div -->
+
+            <div class="design__sections__img-div">
+                <img class="design-img" src="assets/media/image/design/pana.svg" alt="">
             </div>
-            <div class="design-sec__data">
+
+            <!-- data div -->
+
+            <div class="design__sections__data">
                 <h3>How to design your site footer like <br> we did</h3>
                 <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa
                     nunc varius arcu,
@@ -193,7 +236,7 @@
                     vehicula leo dui, at porta nisi facilisis finibus. In euismod augue viin nisi eget nulla commodo
                     faucibus efficitur quis massa. Praesent felis est, finibus et
                     nisi ac, hendrerit
-                    venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
+                    venenatis libero. Donec consectetur</p>
                 <button class="main_sect-btn">Learn More</button>
             </div>
         </section>
@@ -201,15 +244,16 @@
 
     <article class="tesla-article container-fluid">
         <section class="tesla-section container">
+            <!-- img section -->
             <div class="tesla-section__left">
                 <img class="tesla-img" src="assets/media/image/tesla/image 9.png" alt="">
             </div>
+            <!-- paragraph section -->
             <div class="tesla-section__right">
                 <p>Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus
                     tincidunt ullamcorper.
                     Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie
                     arcu, at hendrerit
-                    elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed
                     augue ultrices, quis
                     tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
                     Quisque malesuada
@@ -217,9 +261,9 @@
                     condimentum id.
                     Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
 
-                <h5>Tim Smith</h5>
+                <h5 class="tesla-section__right__name">Tim Smith</h5>
 
-                <p class="last-para">British Dragon Boat Racing Association</p>
+                <p class="tesla-section__right__last-para">British Dragon Boat Racing Association</p>
                 <div class="botton-tesla">
                     <img class="tesls-client-img" src="assets/media/image/tesla/Frame 10.png" alt="">
                     <h5 style="cursor: pointer;">Meet all customers <img src="assets/media/image/tesla/Right.png"
@@ -237,7 +281,7 @@
             joining the
             community, read about how our community are increasing their membership income and lot's more.​</p>
 
-        <section class=" container market-box">
+        <section class="container market-box">
             <div class="market-box__box">
                 <img class="market-img" src="assets/media/image/marketing/1.png" alt="">
 
@@ -257,7 +301,7 @@
             <div class="glow-box">
 
 
-                <div class="market-box__box-divs item-1">
+                <div class="glow-box__divs item-1">
                     <h3>Creating Streamlined
                         Safeguarding Processes with
                         OneRen</h3>
@@ -269,7 +313,7 @@
                 </div>
 
 
-                <div class="market-box__box-divs item-2">
+                <div class="glow-box__divs item-2">
                     <h3>What are your safeguarding
                         responsibilities and how can
                         you manage them?</h3>
@@ -281,7 +325,7 @@
                 </div>
 
 
-                <div class="market-box__box-divs item-3">
+                <div class="glow-box__divs item-3">
                     <h3>Revamping the Membership
                         Model with Triathlon
                         Australia</h3>
@@ -303,48 +347,49 @@
     </article>
 
     <footer class="container-fluid">
-        <section class="container">
-            <section class="footer_logo">
+        <section class="container footer-sections">
+
+            <section class="footer-sections__logo">
                 <img class="footer_logo__img" src="assets/media/image/footer/Logo.png" alt="">
                 <p class="mt-4 px-5" style="color: #d9dbe1 !important;">Copyright © 2020 Nexcent ltd. <br>
                     All rights reserved</p>
 
                 <div class="social-grp mt-4">
-                    <div class="socail-grid__round">
+                    <div class="social-grp__round">
                         <a href=""><img src="assets/media/image/footer/inst.png" alt=""></a>
                     </div>
-                    <div class="socail-grid__round">
+                    <div class="social-grp__round">
                         <a href=""><img src="assets/media/image/footer/dribble.png" alt=""></a>
                     </div>
-                    <div class="socail-grid__round">
+                    <div class="social-grp__round">
                         <a href=""><img src="assets/media/image/footer/x.png" alt=""></a>
                     </div>
-                    <div class="socail-grid__round">
+                    <div class="social-grp__round">
                         <a href=""><img src="assets/media/image/footer/youtube.png" alt=""></a>
                     </div>
                 </div>
             </section>
-            <section class="footer-Company">
+            <section class="footer-sections__Company">
                 <h6>Company</h6>
                 <ul>
-                    <li>About us</li>
-                    <li>Blog</li>
-                    <li>Contact us</li>
-                    <li>Pricing</li>
-                    <li>Testimonials </li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Testimonials</a></li>
                 </ul>
             </section>
-            <section class="footer-Support">
+            <section class="footer-sections__Support">
                 <h6>Support</h6>
                 <ul>
-                    <li>Help center</li>
-                    <li>Terms of service</li>
-                    <li>Legal</li>
-                    <li>Privacy policy</li>
-                    <li>Status </li>
+                    <li><a href="#">Help center</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Status</a></li>
                 </ul>
             </section>
-            <section class="footer-input">
+            <section class="footer-sections__input">
                 <h5>Stay up to date</h5>
                 <input type="email" name="email" placeholder="Your email address" id="email">
                 <img class="footer-send-img" src="assets/media/image/footer/send.png" alt="">

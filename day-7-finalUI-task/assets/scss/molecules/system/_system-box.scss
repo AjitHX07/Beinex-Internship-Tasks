@@ -16,7 +16,7 @@ $paragraph_color: #717171;
   .items-box {
     width: 18.75rem;
     border-radius: 8px;
-    height: 17.75rem;
+    height: 17.95rem;
     border-left: 4px #fafbfc solid;
     border-right: 4px #fafbfc solid;
     border-bottom: 4px #fafbfc solid;
@@ -24,6 +24,12 @@ $paragraph_color: #717171;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all ease-out 1s;
+
+    &:hover {
+      background-color: #e9f7e9;
+      transform: scale(1.03);
+    }
   }
 }
 .h3 {
@@ -34,19 +40,25 @@ $paragraph_color: #717171;
 @media (max-width: 600px) {
   .system-box {
     flex-direction: column;
-    margin-top: 2rem !important;
+    margin-top: 1rem !important;
     align-items: center;
-    height: 60rem;
+    height: 75rem;
+    gap: 4rem;
+
+    .items-box {
+      height: 20rem !important ;
+    }
   }
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .system-box {
     margin-top: 1rem !important;
     width: 100%;
+    margin: 0 !important;
     gap: 1rem;
 
     .items-box {
-      width: 16.75rem !important;
+      width: 15rem !important;
     }
   }
 }

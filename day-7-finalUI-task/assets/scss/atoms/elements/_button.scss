@@ -5,4 +5,11 @@ button {
   padding: 0.4rem 2rem;
   border-radius: 6px !important;
   background-color: $accent_color;
+  transition: all 0.6s ease-in-out;
+  color: white;
+
+  &:hover {
+    color: rgb(242, 247, 239);
+    background-color: #71c974;
+  }
 }

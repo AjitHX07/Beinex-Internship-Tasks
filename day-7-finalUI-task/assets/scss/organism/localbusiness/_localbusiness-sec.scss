@@ -1,18 +1,24 @@
 $even_container_bg: #f5f7fa;
 
 .localbusiness-div {
-  background-color: $even_container_bg;
   height: 19.875rem;
+  background-color: $even_container_bg;
 }
+
 @media (max-width: 600px) {
   .localbusiness-div {
-    height: 50rem;
+    height: 45rem;
     text-align: center;
   }
 }
+
 @media (min-width: 601px) and (max-width: 1024px) {
   .localbusiness-div {
-    height: 35rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     text-align: center;
   }
 }

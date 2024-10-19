@@ -8,6 +8,12 @@ button {
   padding: 0.4rem 2rem;
   border-radius: 6px !important;
   background-color: #4caf4f;
+  transition: all 0.6s ease-in-out;
+  color: white;
+}
+button:hover {
+  color: rgb(242, 247, 239);
+  background-color: #71c974;
 }
 
 ul {
@@ -16,6 +22,7 @@ ul {
   justify-content: center;
   gap: 2rem;
   width: 50rem;
+  transition: all ease-in 1s !important;
 }
 
 .main-image {
@@ -37,9 +44,9 @@ ul {
   height: 40px;
 }
 
-.pixel-sec__img {
-  width: 23.596rem;
-  height: 23.562rem;
+.design-img {
+  width: 28rem;
+  height: 27rem;
 }
 
 .tesls-client-img {
@@ -47,12 +54,16 @@ ul {
 }
 
 .tesla-img {
-  width: 21.375rem;
-  height: 21rem;
+  width: 23rem;
+  height: 23rem;
 }
 
 .market-img {
   width: 23rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .footer_logo__img {
