@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkSystem</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/scss/style.css">
+
+
+
+</head>
+
+<body>
+
+    <main>
+        <section class="grade-card">
+
+            <h2>Grade calculator</h2>
+            <section class="grade-card__box">
+                <div class="input-grade">
+
+                    <form action="." method="post">
+                        <label for="name">Student Name</label>
+                        <input type="text" id="name">
+                        <br>
+                        <label for="sub_math">maths</label>
+                        <input type="number" id="sub_math">
+                        <br>
+                        <label for="sub_science">Science</label>
+                        <input type="number" id="sub_science">
+                        <br>
+                        <label for="sub_eng">English</label>
+                        <input type="number" id="sub_eng">
+
+                    </form>
+
+                </div>
+                <div class="output-grade">
+                    <h5>
+                        Name : <span id="st_name"></span>
+                    </h5>
+                    <p>Total : <span id="total"></span></p>
+                    <p>Averge : <span id="avg"></span></p>
+                    <p>Grade : <span id="grade"></span></p>
+                </div>
+
+            </section>
+            <button onclick="gradecalc()">Results</button>
+
+        </section>
+    </main>
+
+    <!-- js -->
+    <script src="assets/js/mark.js" defer></script>
+</body>
+
+</html>
