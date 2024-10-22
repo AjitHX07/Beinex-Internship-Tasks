@@ -1,0 +1,49 @@
+7, List and explain various array methods available in JavaScript. For each method, provide a brief description and an example?
+
+1. push()
+
+ Adds one or more elements to the end of an array and returns the new length of the array.
+
+ 2. pop()
+
+Removes the last element from an array and returns that element. This method changes the length of the array.
+
+3. shift()
+
+ Removes the first element from an array and returns that element, shifting all other elements down.
+
+ 4. unshift()
+
+Adds one or more elements to the beginning of an array and returns the new length of the array.
+
+5. slice()
+
+Returns a shallow copy of a portion of an array into a new array, selected from start to end (not included)
+
+6. splice()
+
+Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+
+7. forEach()
+
+Executes a provided function once for each array element.
+
+8. map()
+
+Creates a new array with the results of calling a provided function on every element in the calling array.
+
+9. filter()
+
+Creates a new array with all elements that pass the test implemented by the provided function.
+
+10. reduce()
+
+Executes a reducer function on each element of the array, resulting in a single output value.
+
+11. find()
+
+Returns the value of the first element in the provided array that satisfies the provided testing function.
+
+12. includes()
+
+ Determines whether an array includes a certain value among its entries, returning true or false.
