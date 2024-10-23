@@ -53,14 +53,14 @@ person2 = {
     name: 'jithin', age: 25, role: 'SDE2'
 }
 
-const mergeObj = () => {
+const mergeObj = () => { //the function used to merge two objects 
     person3 = {
         person1: { ...person1 }, person2: { ...person2 }
     }
 
     return person3
 }
-// console.log(mergeObj());
+console.log(mergeObj());
 
 
 
@@ -75,7 +75,7 @@ const sumOfEvenNumbers = () => {
         .reduce((acc, current) => acc + current, 0); // Sum the even numbers
 };
 
-// console.log(sumOfEvenNumbers());
+console.log(sumOfEvenNumbers());
 
 
 
