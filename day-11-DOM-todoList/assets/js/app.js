@@ -14,7 +14,7 @@ btnAdd.addEventListener("click", () => {
     newTodo.style.display = "flex";
     newTodo.style.justifyContent = "space-between";
     newTodo.style.alignItems = 'center';
-    newTodo.style.marginBottom = '0.5rem';
+    newTodo.style.marginBottom = '1rem';
     newTodo.style.paddingRight = '6rem';
 
     // Create a checkbox
