@@ -64,6 +64,33 @@ button:active {
   padding: 4rem 1.8rem !important;
   transition: all ease-in 200ms;
 }
+.equal-btn:hover {
+  background-color: #e4f6e1;
+}
+.equal-btn:active {
+  background-color: rgb(175, 232, 169);
+}
+
+#btn-reset:hover {
+  background-color: rgb(223, 117, 117);
+}
+#btn-reset:active {
+  background-color: rgb(210, 63, 63);
+}
+
+#btn-del:hover {
+  background-color: rgb(230, 188, 109);
+}
+#btn-del:active {
+  background-color: orange;
+}
+
+#history-btn:hover {
+  background-color: rgb(144, 165, 238);
+}
+#history-btn:active {
+  background-color: rgb(117, 140, 233);
+}
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   button {
