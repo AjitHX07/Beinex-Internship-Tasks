@@ -1,10 +1,14 @@
+// Select the main input and output fields in the display
 const inputField = document.querySelector('.input');
 const outputField = document.querySelector('.output');
-const historyDisplay = document.createElement('div'); // History display element
-historyDisplay.classList.add('history-display'); // Add a class for easy styling
 
-document.querySelector('.display').appendChild(historyDisplay); // Adding history display to main
+// Create the history display element and add a class for styling
+const historyDisplay = document.createElement('div');
+historyDisplay.classList.add('history-display');
 
+document.querySelector('.display').appendChild(historyDisplay);
+
+// Select all buttons and add event listeners to handle clicks
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -13,9 +17,10 @@ buttons.forEach(button => {
     });
 });
 
+// Function to handle different button actions
 function handleButtonClick(btnId) {
     switch (btnId) {
-        // Numbers
+        // Number buttons
         case 'btn-0': case 'btn-1': case 'btn-2': case 'btn-3': case 'btn-4':
         case 'btn-5': case 'btn-6': case 'btn-7': case 'btn-8': case 'btn-9':
             inputField.value += btnId.replace('btn-', '');
@@ -24,22 +29,22 @@ function handleButtonClick(btnId) {
             inputField.value += '00';
             break;
 
-        // Add, Subtract, Multiply, Divide Operators
+        // Basic math operators
         case 'btn-add': case 'btn-subtract': case 'btn-mul': case 'btn-divide':
             inputField.value += getOperatorSymbol(btnId);
             break;
 
-        // Decimal Point
+        // Decimal point (avoids adding multiple dots)
         case 'btn-dot':
             if (!inputField.value.includes('.')) inputField.value += '.';
             break;
 
-        // Equals button
+        // Equal button to calculate result
         case 'equal-btn':
             calculateResult();
             break;
 
-        // Reset and Delete buttons
+        // Reset and delete buttons
         case 'btn-reset':
             resetCalculator();
             break;
@@ -47,26 +52,33 @@ function handleButtonClick(btnId) {
             deleteLastInput();
             break;
 
-        // Square Root, Square, Cube, Percentage, History
+        // Advanced math functions
         case 'btn-sqrt':
             calculateSquareRoot();
             break;
+        //square
         case 'btn-square':
             calculateSquare();
             break;
+
+
+        //cube
         case 'cube-btn':
             calculateCube();
             break;
+        //percentile
         case 'btn-percent':
             calculatePercentage();
             break;
+
+        // History button to toggle visibility
         case 'history-btn':
             toggleHistoryDisplay();
             break;
     }
 }
 
-// Get operator symbol for mathematical operations
+// Function to retrieve operator symbol based on button ID
 function getOperatorSymbol(btnId) {
     switch (btnId) {
         case 'btn-add': return '+';
@@ -76,29 +88,44 @@ function getOperatorSymbol(btnId) {
     }
 }
 
-// Calculation functions
+// Calculate and display result, handling empty input and duplicate results
 function calculateResult() {
-    if (!inputField.value) {
+    const currentInput = inputField.value;
+    if (!currentInput) {
         outputField.value = '0';
         return;
     }
+
+
+
+    // Check if the result is already in the history to avoid duplicates
+    if (history.length > 0 && history[history.length - 1].startsWith(currentInput + ' =')) {
+        return;
+    }
+
+
     try {
-        outputField.value = eval(inputField.value);
-        addToHistory(`${inputField.value} = ${outputField.value}`);
+        outputField.value = eval(currentInput);
+        addToHistory(`${currentInput} = ${outputField.value}`);
     } catch {
         outputField.value = 'Error';
     }
 }
-// main calc functions (cube, squrt,etc)
+
+// Advanced math functions (square root, square, cube, percentage)
 function calculateSquareRoot() {
     outputField.value = Math.sqrt(parseFloat(inputField.value) || 0);
     addToHistory(`√(${inputField.value}) = ${outputField.value}`);
 }
 
+
 function calculateSquare() {
     outputField.value = Math.pow(parseFloat(inputField.value) || 0, 2);
     addToHistory(`(${inputField.value})² = ${outputField.value}`);
 }
+
+
+
 
 function calculateCube() {
     outputField.value = Math.pow(parseFloat(inputField.value) || 0, 3);
@@ -110,27 +137,70 @@ function calculatePercentage() {
     addToHistory(`(${inputField.value})% = ${outputField.value}`);
 }
 
-// History Management
+
+
+// History array to store calculation entries
 const history = [];
+
+
+
+// Add new entry to history and update display
 function addToHistory(entry) {
     history.push(entry);
     updateHistoryDisplay();
 }
 
+
+// Toggle history display visibility
 function toggleHistoryDisplay() {
     historyDisplay.classList.toggle('visible');
 }
 
+
+
+// Update history display and add Clear History button
 function updateHistoryDisplay() {
     historyDisplay.innerHTML = `<h3>History</h3><ul>${history.map(item => `<li>${item}</li>`).join('')}</ul>`;
+
+
+    // Create the Clear History button if it doesn't exist yet
+    if (!document.querySelector('.clear-history-btn')) {
+        const clearHistoryButton = document.createElement('button');
+        clearHistoryButton.classList.add('clear-history-btn');
+        //styling the btn-clear
+        clearHistoryButton.textContent = 'Clear';
+        clearHistoryButton.style.width = "2.6rem"
+        clearHistoryButton.style.height = "1.5rem"
+        clearHistoryButton.style.padding = "2px"
+        clearHistoryButton.style.position = "relative"
+        clearHistoryButton.style.bottom = "1.5rem"
+        clearHistoryButton.style.left = "7rem"
+        clearHistoryButton.style.backgroundColor = "#ff7c7c"
+
+
+        clearHistory
+
+        // Clear history on button click
+        clearHistoryButton.addEventListener('click', clearHistory);
+
+        // Append the button to the history display
+        historyDisplay.appendChild(clearHistoryButton);
+    }
 }
 
-// Clear, Delete Last Input, and Reset
+// Function to clear history and refresh the display
+function clearHistory() {
+    history.length = 0;
+    updateHistoryDisplay();
+}
+
+// Reset calculator display fields
 function resetCalculator() {
     inputField.value = '';
     outputField.value = '';
 }
 
+// Delete the last character in the input field
 function deleteLastInput() {
     inputField.value = inputField.value.slice(0, -1);
 }
