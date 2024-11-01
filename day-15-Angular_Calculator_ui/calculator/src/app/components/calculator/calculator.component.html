@@ -1,0 +1,33 @@
+<article>
+    <section>
+        <div class="display">
+            <input type="text" [(ngModel)]="currentInput" disabled />
+            <div class="display__output"><span>{{ result }}</span></div>
+        </div>
+
+        <div class="btn-groups">
+            <button id="reset" (click)="clear()">AC</button>
+            <button id="clear" (click)="delete()">C</button>
+            <button (click)="appendOperator('/')">/</button>
+            <button (click)="appendOperator('*')">x</button>
+
+            <button (click)="appendNumber('7')">7</button>
+            <button (click)="appendNumber('8')">8</button>
+            <button (click)="appendNumber('9')">9</button>
+            <button (click)="appendOperator('-')">-</button>
+
+            <button (click)="appendNumber('4')">4</button>
+            <button (click)="appendNumber('5')">5</button>
+            <button (click)="appendNumber('6')">6</button>
+            <button (click)="appendOperator('+')">+</button>
+
+            <button (click)="appendNumber('1')">1</button>
+            <button (click)="appendNumber('2')">2</button>
+            <button (click)="appendNumber('3')">3</button>
+            <button id="equal-btn" (click)="calculate()">=</button>
+
+            <button class="span-two" (click)="appendNumber('0')">0</button>
+            <button (click)="appendNumber('.')">.</button>
+        </div>
+    </section>
+</article>
