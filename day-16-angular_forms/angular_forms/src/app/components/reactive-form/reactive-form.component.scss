@@ -1,0 +1,72 @@
+article {
+  width: 100%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    width: 90%;
+    max-width: 600px; // Set a max width for better responsiveness
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    background: #ebeaea;
+    box-shadow: 20px 20px 60px #e9eae9, -20px -20px 60px #ffffff;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #393838;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    input,
+    select {
+      border-radius: 6px;
+      border: none;
+      padding: 0.6rem 1rem;
+      width: 100%; // Ensure inputs take full width
+      margin-top: 0.5rem;
+
+      &:focus {
+        outline: none;
+        border: 2px solid #424141; // Change border color on focus
+      }
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+
+    button {
+      background-color: #424141;
+      color: white;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 2rem;
+      transition: all ease-out 200ms;
+      width: 100%; // Make button full width
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+      }
+    }
+
+    .success {
+      margin-top: 2rem;
+      background: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  }
+}

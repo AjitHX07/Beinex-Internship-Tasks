@@ -1,0 +1,78 @@
+article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    background: #ebeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      text-align: center;
+      color: #393838;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      padding: 0.6rem;
+      &:focus {
+        outline: none;
+        border-color: #66afe9;
+      }
+    }
+
+    .error {
+      color: red;
+      font-size: 0.85rem;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #424141;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #333;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        background-color: #bbb;
+        cursor: not-allowed;
+      }
+    }
+
+    .submitted-data {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        color: green;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<article>
+    <section>
+        <h2>Template-Driven Form</h2>
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+
+            <!-- Name Field -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="userName" #name="ngModel" required minlength="3"
+                maxlength="10" />
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                <div *ngIf="name.errors?.['required']">Name is required.</div>
+                <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters.</div>
+                <div *ngIf="name.errors?.['maxlength']">Name cannot exceed 10 characters.</div>
+            </div>
+
+            <!-- Email Field -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="userEmail" #email="ngModel" required />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Enter a valid email address.</div>
+            </div>
+
+            <!-- Password Field -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="userPassword" #password="ngModel" required
+                minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" />
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+                <div *ngIf="password.errors?.['required']">Password is required.</div>
+                <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters.</div>
+                <div *ngIf="password.errors?.['pattern']">
+                    Password must contain at least one uppercase letter, one lowercase letter, and one number.
+                </div>
+            </div>
+
+            <!-- Confirm Password Field -->
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"
+                #confirmPassword="ngModel" required />
+            <div *ngIf="confirmPassword.touched && confirmPassword.value !== userPassword" class="error">
+                Confirm Password must match the Password.
+            </div>
+
+            <button type="submit" [disabled]="myForm.invalid || confirmPassword.value !== userPassword">Submit</button>
+        </form>
+
+        <!-- Display Submitted Data -->
+        <div *ngIf="submittedData" class="submitted-data">
+            <h3>Form Submitted Successfully</h3>
+            <p><strong>Name:</strong> {{ submittedData.userName }}</p>
+            <p><strong>Email:</strong> {{ submittedData.userEmail }}</p>
+            <p><strong>Password:</strong> {{ submittedData.userPassword }}</p>
+        </div>
+    </section>
+</article>
