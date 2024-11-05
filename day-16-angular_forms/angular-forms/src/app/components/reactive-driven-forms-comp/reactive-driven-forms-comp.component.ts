@@ -1,18 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-reactive-form',
+  selector: 'app-reactive-driven-forms-comp',
   standalone: true,
-
-  imports: [CommonModule, ReactiveFormsModule, BrowserModule, FormsModule],
-  templateUrl: './reactive-form.component.html',
-  styleUrl: './reactive-form.component.scss'
+  imports: [ReactiveFormsModule, CommonModule],
+  templateUrl: './reactive-driven-forms-comp.component.html',
+  styleUrl: './reactive-driven-forms-comp.component.scss'
 })
-export class AppComponent {
+export class ReactiveDrivenFormsCompComponent {
   userForm: FormGroup;
   submitted = false;
 
@@ -39,6 +36,9 @@ export class AppComponent {
     if (this.userForm.invalid) {
       return;
     }
-    // Handle successful submission here
+    else {
+      debugger
+      const obj = this.userForm.value
+    }
   }
 }

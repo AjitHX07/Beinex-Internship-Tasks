@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-template-driven-form',
+  selector: 'app-template-driven-forms-comp',
   standalone: true,
   imports: [FormsModule, CommonModule],
-  templateUrl: './template-driven-form.component.html',
-  styleUrl: './template-driven-form.component.scss'
+  templateUrl: './template-driven-forms-comp.component.html',
+  styleUrl: './template-driven-forms-comp.component.scss'
 })
-export class TemplateDrivenFormComponent {
+export class TemplateDrivenFormsCompComponent {
   userName: string = '';
   userEmail: string = '';
   userPassword: string = '';
@@ -23,6 +23,9 @@ export class TemplateDrivenFormComponent {
         userEmail: this.userEmail,
         userPassword: this.userPassword,
       };
+
+      alert("login Success")
+
       form.resetForm();
     }
   }

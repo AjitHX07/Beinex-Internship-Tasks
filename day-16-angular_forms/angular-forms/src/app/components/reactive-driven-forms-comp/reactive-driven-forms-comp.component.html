@@ -6,31 +6,31 @@
             <div>
                 <label for="name">Name</label>
                 <input type="text" id="name" formControlName="name" />
-                <div *ngIf="submitted && userForm.get('name').errors" class="error">
+                <!-- <div *ngIf="submitted && userForm.get('name').errors" class="error">
                     <div *ngIf="userForm.get('name').errors.required">Name is required.</div>
                     <div *ngIf="userForm.get('name').errors.minlength">Minimum 3 characters required.</div>
                     <div *ngIf="userForm.get('name').errors.maxlength">Maximum 10 characters allowed.</div>
-                </div>
+                </div> -->
             </div>
 
             <div>
                 <label for="email">Email</label>
                 <input type="email" id="email" formControlName="email" />
-                <div *ngIf="submitted && userForm.get('email').errors" class="error">
+                <!-- <div *ngIf="submitted && userForm.get('email').errors" class="error">
                     <div *ngIf="userForm.get('email').errors.required">Email is required.</div>
                     <div *ngIf="userForm.get('email').errors.email">Invalid email format.</div>
-                </div>
+                </div> -->
             </div>
 
             <div>
                 <label for="password">Password</label>
                 <input type="password" id="password" formControlName="password" />
-                <div *ngIf="submitted && userForm.get('password').errors" class="error">
+                <!-- <div *ngIf="submitted && userForm.get('password').errors" class="error">
                     <div *ngIf="userForm.get('password').errors.required">Password is required.</div>
                     <div *ngIf="userForm.get('password').errors.minlength">Minimum 8 characters required.</div>
                     <div *ngIf="userForm.get('password').errors.pattern">Must contain uppercase, lowercase, and number.
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div>
@@ -48,8 +48,8 @@
                     <option value="25-32">25 - 32</option>
                     <option value="33-above">33 and Above</option>
                 </select>
-                <div *ngIf="submitted && userForm.get('age').errors?.['required']" class="error">Age Group is required.
-                </div>
+                <!-- <div *ngIf="submitted && userForm.get('age').errors?.['required']" class="error">Age Group is required.
+                </div> -->
             </div>
 
             <div>
@@ -58,8 +58,8 @@
                 <input type="radio" id="male" formControlName="gender" value="male" />
                 <label for="female">Female</label>
                 <input type="radio" id="female" formControlName="gender" value="female" />
-                <div *ngIf="submitted && userForm.get('gender').errors?.['required']" class="error">Gender is required.
-                </div>
+                <!-- <div *ngIf="submitted && userForm.get('gender').errors?.['required']" class="error">Gender is required.
+                </div> -->
             </div>
 
             <button type="submit" [disabled]="userForm.invalid">Submit</button>
