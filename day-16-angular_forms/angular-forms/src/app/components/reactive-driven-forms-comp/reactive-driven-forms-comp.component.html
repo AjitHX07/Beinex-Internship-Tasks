@@ -1,73 +1,125 @@
+<!-- reactive-driven-forms-comp.component.html -->
 <article>
     <section>
-        <h2>Reactive Form</h2>
-        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <h2>User Registration</h2>
 
-            <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" formControlName="name" />
-                <!-- <div *ngIf="submitted && userForm.get('name').errors" class="error">
-                    <div *ngIf="userForm.get('name').errors.required">Name is required.</div>
-                    <div *ngIf="userForm.get('name').errors.minlength">Minimum 3 characters required.</div>
-                    <div *ngIf="userForm.get('name').errors.maxlength">Maximum 10 characters allowed.</div>
-                </div> -->
-            </div>
-
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" formControlName="email" />
-                <!-- <div *ngIf="submitted && userForm.get('email').errors" class="error">
-                    <div *ngIf="userForm.get('email').errors.required">Email is required.</div>
-                    <div *ngIf="userForm.get('email').errors.email">Invalid email format.</div>
-                </div> -->
-            </div>
-
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" formControlName="password" />
-                <!-- <div *ngIf="submitted && userForm.get('password').errors" class="error">
-                    <div *ngIf="userForm.get('password').errors.required">Password is required.</div>
-                    <div *ngIf="userForm.get('password').errors.minlength">Minimum 8 characters required.</div>
-                    <div *ngIf="userForm.get('password').errors.pattern">Must contain uppercase, lowercase, and number.
+        <!-- Form Section -->
+        <div *ngIf="showForm" class="form-container">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" formControlName="name" />
+                    <div *ngIf="submitted && f['name'].errors" class="error">
+                        <div *ngIf="f['name'].errors?.['required']">Name is required.</div>
+                        <div *ngIf="f['name'].errors?.['minlength']">Minimum 3 characters required.</div>
+                        <div *ngIf="f['name'].errors?.['maxlength']">Maximum 10 characters allowed.</div>
                     </div>
-                </div> -->
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email " id="email" formControlName="email" />
+                    <div *ngIf="submitted && f['email'].errors" class="error">
+                        <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+                        <div *ngIf="f['email'].errors?.['email']">Invalid email format.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password " id="password"
+                        formControlName="password" />
+                    <div *ngIf="submitted && f['password'].errors" class="error">
+                        <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+                        <div *ngIf="f['password'].errors?.['minlength']">Minimum 8 characters required.</div>
+                        <div *ngIf="f['password'].errors?.['pattern']">
+                            Must contain uppercase, lowercase, and number.
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" placeholder="Confirm password " id="confirmPassword"
+                        formControlName="confirmPassword" />
+                    <div *ngIf="submitted && userForm.errors?.['mismatch']" class="error">
+                        Passwords must match.
+                    </div>
+                </div>
+
+                <div>
+                    <label for="age">Age Group</label>
+                    <select formControlName="age" id="age">
+                        <option value="">Select Age Group</option>
+                        <option value="under-18">Below 18</option>
+                        <option value="19-24">19 - 24</option>
+                        <option value="25-32">25 - 32</option>
+                        <option value="33-above">33 and Above</option>
+                    </select>
+                    <div *ngIf="submitted && f['age'].errors?.['required']" class="error">
+                        Age Group is required.
+                    </div>
+                </div>
+
+                <div>
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label for="male">
+                            <input type="radio" id="male" formControlName="gender" value="male" />
+                            Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" id="female" formControlName="gender" value="female" />
+                            Female
+                        </label>
+                    </div>
+                    <div *ngIf="submitted && f['gender'].errors?.['required']" class="error">
+                        Gender is required.
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Table Section -->
+        <div *ngIf="!showForm" class="table-container">
+            <div class="table-header">
+                <h3>Registered Users</h3>
+                <button class="add-new-btn" (click)="onAddNew()">Add New User</button>
             </div>
 
-            <div>
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" formControlName="confirmPassword" />
-                <div *ngIf="submitted && userForm.errors?.['mismatch']" class="error">Passwords must match.</div>
+            <div class="table-responsive">
+                <table *ngIf="userData$ | async as users">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age Group</th>
+                            <th>Gender</th>
+                            <th>Submitted Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.gender}}</td>
+                            <td>{{formatDate(user.submittedDate)}}</td>
+                            <td>
+                                <button class="delete-btn" (click)="onDelete(user.id)">Delete</button>
+                            </td>
+                        </tr>
+                        <tr *ngIf="users.length === 0">
+                            <td colspan="7" class="no-data">No users registered yet</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <div>
-                <label for="age">Age Group</label>
-                <select formControlName="age" id="age">
-                    <option value="">Select Age Group</option>
-                    <option value="under-18">Below 18</option>
-                    <option value="19-24">19 - 24</option>
-                    <option value="25-32">25 - 32</option>
-                    <option value="33-above">33 and Above</option>
-                </select>
-                <!-- <div *ngIf="submitted && userForm.get('age').errors?.['required']" class="error">Age Group is required.
-                </div> -->
-            </div>
-
-            <div>
-                <label>Gender:</label>
-                <label for="male">Male</label>
-                <input type="radio" id="male" formControlName="gender" value="male" />
-                <label for="female">Female</label>
-                <input type="radio" id="female" formControlName="gender" value="female" />
-                <!-- <div *ngIf="submitted && userForm.get('gender').errors?.['required']" class="error">Gender is required.
-                </div> -->
-            </div>
-
-            <button type="submit" [disabled]="userForm.invalid">Submit</button>
-
-            <div *ngIf="submitted && userForm.valid" class="success">
-                <h3>Form Data:</h3>
-                <pre>{{ userForm.value | json }}</pre>
-            </div>
-        </form>
+        </div>
     </section>
 </article>

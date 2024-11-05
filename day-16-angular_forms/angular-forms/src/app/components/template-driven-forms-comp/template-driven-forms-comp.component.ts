@@ -1,6 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+
+export interface UserForm {
+  name: string;
+  email: string;
+  password: string;
+  age: string;
+  gender: string;
+}
+
 
 @Component({
   selector: 'app-template-driven-forms-comp',
@@ -10,23 +20,58 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './template-driven-forms-comp.component.scss'
 })
 export class TemplateDrivenFormsCompComponent {
-  userName: string = '';
-  userEmail: string = '';
-  userPassword: string = '';
-  confirmPassword: string = '';
-  submittedData: any = null;
+  user: UserForm = {
+    name: '',
+    email: '',
+    password: '',
+    age: '',
+    gender: ''
+  };
 
-  onSubmit(form: any) {
-    if (form.valid && this.userPassword === this.confirmPassword) {
-      this.submittedData = {
-        userName: this.userName,
-        userEmail: this.userEmail,
-        userPassword: this.userPassword,
-      };
+  showForm = true;
+  confirmPassword = '';
 
-      alert("login Success")
+  ageGroups = [
+    { value: 'under-18', label: 'Below 18' },
+    { value: '19-24', label: '19 - 24' },
+    { value: '25-32', label: '25 - 32' },
+    { value: '33-above', label: '33 and Above' }
+  ];
 
-      form.resetForm();
+  constructor(public userService: UserService) { }
+
+  onSubmit(form: NgForm): void {
+    if (form.invalid) return;
+
+    if (this.user.password !== this.confirmPassword) {
+      form.form.setErrors({ passwordMismatch: true });
+      return;
     }
+
+    const { password, ...userData } = this.user;
+    this.userService.addUser(userData);
+
+    this.resetForm(form);
+    this.showForm = false;
+  }
+
+  resetForm(form: NgForm): void {
+    form.resetForm();
+    this.confirmPassword = '';
+    this.user = {
+      name: '',
+      email: '',
+      password: '',
+      age: '',
+      gender: ''
+    };
+  }
+
+  onDelete(id: number): void {
+    this.userService.deleteUser(id);
+  }
+
+  onAddNew(): void {
+    this.showForm = true;
   }
 }
