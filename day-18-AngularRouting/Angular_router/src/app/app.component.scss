@@ -1,0 +1,56 @@
+// varibles
+$raduis: 4px;
+
+// colors
+$font_color: rgb(83, 80, 80);
+
+// mixings
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  max-height: fit-content;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid gray;
+  color: $font_color;
+  @include flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+
+  nav {
+    img {
+      width: 4rem;
+    }
+    ul {
+      list-style: none;
+      @include flex;
+      padding: 1rem 0;
+      gap: 2rem;
+
+      li {
+        transition: all ease-out 200ms;
+        &:hover {
+          transform: scale(1.09);
+        }
+      }
+    }
+    a {
+      color: $font_color;
+      text-decoration: none;
+    }
+  }
+  .btn-grp {
+    @include flex;
+    gap: 1.5rem;
+
+    .cart-btn {
+      background-color: white;
+      border: 1px solid gray;
+      color: black;
+    }
+  }
+}
