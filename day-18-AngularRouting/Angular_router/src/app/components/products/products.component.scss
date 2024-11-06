@@ -43,3 +43,12 @@ article {
     }
   }
 }
+@media (max-width: 768px) {
+  article {
+    height: 160rem;
+  }
+
+  section {
+    flex-direction: column;
+  }
+}

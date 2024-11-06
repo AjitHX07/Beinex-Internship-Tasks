@@ -42,10 +42,33 @@ article {
       width: 50%;
       height: 100%;
     }
+
     img {
       width: 100%;
       height: 100%;
       border-radius: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  article {
+    height: 150vh;
+  }
+
+  section {
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+
+    .data-div {
+      width: 90% !important;
+      height: 20rem;
+      left: 0 !important;
+    }
+    .img-div {
+      width: 90% !important;
+      height: 10rem;
     }
   }
 }

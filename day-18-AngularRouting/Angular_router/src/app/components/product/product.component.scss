@@ -22,3 +22,13 @@ article {
     }
   }
 }
+
+@media (max-width: 768px) {
+  article {
+    height: 100vh;
+  }
+
+  section {
+    padding: 0 !important;
+  }
+}

@@ -7,5 +7,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Angular_router';
+  menuOpen: boolean = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    const header = document.querySelector('header');
+    if (header) {
+      header.classList.toggle('menu-open', this.menuOpen);
+    }
+  }
 }
