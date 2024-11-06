@@ -1,0 +1,230 @@
+header {
+  background-color: #f5f7fa;
+  height: 84px;
+}
+header nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+header nav .navBtn {
+  display: flex;
+  gap: 1rem;
+}
+header nav .navBtn__login {
+  background-color: #f5f7fa !important;
+  color: #4caf4f !important;
+  margin-right: 7rem;
+}
+
+main {
+  height: 90vh;
+  background-color: #f5f7fa;
+}
+
+@media (max-width: 600px) {
+  main {
+    height: 110vh;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    height: 96vh;
+    background-color: #f5f7fa;
+  }
+}
+.client {
+  height: 12.875rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.client p {
+  padding: 0rem;
+  color: #717171 !important;
+}
+
+@media (max-width: 600px) {
+  .client {
+    margin-top: 3.7rem !important;
+    height: 20rem;
+  }
+}
+.system {
+  height: 27rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .system {
+    height: 90rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .system {
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.pixelgrade {
+  height: 27.063rem;
+  margin-top: 7rem;
+}
+.pixelgrade h3 {
+  padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .pixelgrade {
+    height: 55rem;
+    margin-top: -1rem !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pixelgrade {
+    height: 50rem;
+    text-align: center;
+  }
+}
+.localbusiness-div {
+  height: 19.875rem;
+  background-color: #f5f7fa;
+}
+
+@media (max-width: 600px) {
+  .localbusiness-div {
+    height: 45rem;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .localbusiness-div {
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.design {
+  height: 35rem;
+}
+
+@media (max-width: 600px) {
+  .design {
+    flex-direction: column-reverse !important;
+    height: 60rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .design {
+    justify-content: center;
+    display: flex;
+    height: 60rem;
+  }
+  .design .design__sections {
+    flex-direction: column-reverse;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .design .design__sections__img-div {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem !important;
+  }
+  .design .design__sections__data {
+    padding: 0;
+    width: 100%;
+  }
+}
+.tesla-article {
+  background-color: #f5f7fa;
+  height: 24.375rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .tesla-article {
+    height: 67rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    width: 100%;
+    height: 52.375rem !important;
+    padding: 0 3rem;
+  }
+}
+.marketing {
+  height: 40rem;
+}
+
+@media (max-width: 600px) {
+  .marketing {
+    height: 100rem;
+    position: relative;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .marketing {
+    height: 93rem;
+  }
+}
+.demo {
+  height: 18.75rem;
+  margin-top: 8rem;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+.demo h1 {
+  padding-top: 3rem;
+}
+.demo button {
+  color: #f5f7fa;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .demo {
+    height: 30rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .demo {
+    height: 26rem !important;
+  }
+}
+footer {
+  height: 20.5rem;
+  background-color: #263238;
+  color: white !important;
+}
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+}
+
+@media (max-width: 600px) {
+  footer {
+    height: 60rem;
+  }
+  footer section {
+    flex-direction: column;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    height: 78rem !important;
+  }
+  footer section {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=index.css.map */

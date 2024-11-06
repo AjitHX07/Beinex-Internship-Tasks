@@ -1,0 +1,60 @@
+button {
+  padding: 1.5rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all ease-in 100ms;
+
+  &:hover {
+    background-color: #e2e2e2;
+    transform: scale(1.04);
+  }
+  &:active {
+    transform: scale(1);
+    background-color: #f0f0f0;
+  }
+}
+.equal-btn {
+  padding: 4rem 1.8rem !important;
+  transition: all ease-in 200ms;
+
+  &:hover {
+    background-color: #e4f6e1;
+  }
+
+  &:active {
+    background-color: rgb(175, 232, 169);
+  }
+}
+
+#btn-reset {
+  &:hover {
+    background-color: rgb(223, 117, 117);
+  }
+  &:active {
+    background-color: rgb(210, 63, 63);
+  }
+}
+#btn-del {
+  &:hover {
+    background-color: rgb(230, 188, 109);
+  }
+  &:active {
+    background-color: orange;
+  }
+}
+
+#history-btn {
+  &:hover {
+    background-color: rgb(144, 165, 238);
+  }
+  &:active {
+    background-color: rgb(117, 140, 233);
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  button {
+    padding: 1.4rem 1.7rem;
+  }
+}

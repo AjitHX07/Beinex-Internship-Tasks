@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchTerm" (keyup)="onSearch()" placeholder="Search countries..."
+            class="search-input">
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th>Population</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of countries">
+                    <td>{{country.name}}</td>
+                    <td>{{country.capital}}</td>
+                    <td>{{country.population | number}}</td>
+                    <td>{{country.region}}</td>
+                </tr>
+                <tr *ngIf="countries.length === 0">
+                    <td colspan="4" class="no-data">No countries found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination" *ngIf="totalPages > 1">
+        <button [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)" class="page-btn">
+            Previous
+        </button>
+
+        <button *ngFor="let page of pages" (click)="onPageChange(page)" class="page-btn"
+            [class.active]="currentPage === page">
+            {{page}}
+        </button>
+
+        <button [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)" class="page-btn">
+            Next
+        </button>
+    </div>
+</div>

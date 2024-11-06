@@ -1,0 +1,17 @@
+// mixings
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  width: 100%;
+  height: 10vh;
+  @include flex;
+
+  section {
+    @include flex;
+    gap: 2rem;
+  }
+}

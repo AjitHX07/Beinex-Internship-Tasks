@@ -1,0 +1,29 @@
+$even_container_bg: #f5f7fa;
+
+.demo {
+  height: 18.75rem;
+  margin-top: 8rem;
+  background-color: $even_container_bg;
+  text-align: center;
+
+  h1 {
+    padding-top: 3rem;
+  }
+
+  button {
+    color: #f5f7fa;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .demo {
+    height: 30rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .demo {
+    height: 26rem !important;
+  }
+}

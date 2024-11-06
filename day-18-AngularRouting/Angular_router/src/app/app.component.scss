@@ -1,0 +1,111 @@
+// Variables
+$radius: 4px;
+$font_color: rgb(83, 80, 80);
+
+// Mixins
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Base Styles
+header {
+  width: 100%;
+  max-height: fit-content;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid gray;
+  color: $font_color;
+  @include flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+
+    img {
+      width: 4rem;
+    }
+
+    ul {
+      list-style: none;
+      @include flex;
+      padding: 1rem 0;
+      gap: 2rem;
+      transition: transform 0.3s ease;
+
+      li {
+        transition: all ease-out 200ms;
+        &:hover {
+          transform: scale(1.09);
+        }
+      }
+    }
+
+    a {
+      color: $font_color;
+      text-decoration: none;
+    }
+  }
+
+  .btn-grp {
+    @include flex;
+    gap: 1.5rem;
+
+    .cart-btn {
+      background-color: white;
+      border: 1px solid gray;
+      color: black;
+    }
+  }
+
+  // Hamburger menu styles for mobile view
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    span {
+      width: 25px;
+      height: 3px;
+      background-color: $font_color;
+      border-radius: 2px;
+    }
+  }
+
+  // Media query for mobile responsiveness
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: $radius;
+
+      li {
+        padding: 1rem;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          transform: none;
+        }
+      }
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    // Toggle dropdown menu when .menu-open is active
+    .menu-open nav ul {
+      display: flex;
+    }
+  }
+}

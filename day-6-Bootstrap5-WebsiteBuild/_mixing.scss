@@ -1,0 +1,29 @@
+@import "variable";
+
+@mixin aTag {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin h4 {
+  color: $primary-font;
+  font-size: 1.6em;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+@mixin button {
+  padding: 1rem 3.5rem;
+  background-color: $primary-background;
+  color: white;
+}
+@mixin p {
+  color: #5b6469;
+  font-size: 1rem;
+}

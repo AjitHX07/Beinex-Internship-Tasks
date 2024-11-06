@@ -1,0 +1,38 @@
+$paragraph_color: #717171;
+
+.design {
+  height: 35rem;
+}
+
+@media (max-width: 600px) {
+  .design {
+    flex-direction: column-reverse !important;
+    height: 60rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .design {
+    // background-color: #e8e8e8;
+    justify-content: center;
+    display: flex;
+    height: 60rem;
+
+    .design__sections {
+      flex-direction: column-reverse;
+      justify-content: center !important;
+      align-items: center !important;
+      &__img-div {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem !important;
+      }
+
+      &__data {
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}

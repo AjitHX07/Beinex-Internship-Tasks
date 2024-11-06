@@ -1,0 +1,136 @@
+$social-div-bg: #3b464c;
+$link_color: #d9dbe1;
+.footer-sections {
+  &__logo,
+  &__Company,
+  &__Support,
+  &__input {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    height: 17rem;
+  }
+
+  &__logo {
+    color: white !important;
+    p {
+      font-size: 14px;
+      line-height: 1.9rem;
+    }
+
+    .social-grp {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem !important;
+      flex-direction: row;
+
+      &__round {
+        border-radius: 100%;
+        background-color: $social-div-bg;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        transition: all ease-in 100ms;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__Support,
+  &__Company {
+    h6 {
+      font-weight: 600 !important;
+      font-size: 1.25rem !important;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      flex-direction: column;
+      padding-left: 8rem;
+      align-items: start !important;
+      width: 100%;
+      gap: 0.6rem;
+      align-items: center;
+
+      li,
+      a {
+        color: $link_color !important;
+        font-size: 14px !important;
+        transition: all ease-in 200ms;
+
+        &:hover {
+          transform: scale(1.1);
+          color: #f0f4f0;
+        }
+      }
+    }
+  }
+  &__input {
+    transition: all ease-in 1s;
+    &:hover {
+      img {
+        &:hover {
+          transform: rotate(35deg);
+        }
+      }
+    }
+    h5 {
+      font-weight: 600 !important;
+      font-size: 1.8rem !important;
+      margin-top: 4rem !important;
+      color: white !important;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer-sections {
+    &__logo,
+    &__Company,
+    &__Support,
+    &__input {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__Company,
+    &__Support {
+      height: 15rem;
+      h6 {
+        margin-top: 1rem;
+      }
+      ul {
+        padding-left: 10rem;
+      }
+    }
+    &__input {
+      height: 10rem !important;
+      h5 {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .footer-sections {
+    &__logo,
+    &__Company,
+    &__Support,
+    &__input {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__Company,
+    &__Support {
+      ul {
+        padding-left: 13.6rem;
+      }
+    }
+  }
+}

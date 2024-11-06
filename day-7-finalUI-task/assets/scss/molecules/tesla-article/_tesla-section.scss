@@ -1,0 +1,85 @@
+$paragraph_color: #717171;
+
+.tesla-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    width: 43rem;
+    align-items: center;
+  }
+
+  p {
+    color: $paragraph_color !important;
+    padding-right: 1rem !important;
+    margin-top: 2rem !important;
+  }
+
+  &__right {
+    width: 70rem;
+    height: 25rem;
+
+    &__name {
+      margin-top: 1.5rem !important;
+    }
+
+    &__last-para {
+      margin: 0 !important;
+      font-weight: 400;
+      margin-top: 1rem !important;
+    }
+  }
+
+  .botton-tesla {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .tesla-section {
+    flex-direction: column;
+
+    &__left {
+      width: 100%;
+      margin-top: 3rem;
+      flex-direction: column;
+    }
+    .botton-tesla {
+      padding-top: 1rem;
+      flex-direction: column;
+      gap: 2rem;
+
+      .tesls-client-img {
+        width: 90%;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .tesla-article {
+    height: 40.375rem !important;
+  }
+
+  .tesla-section {
+    flex-direction: column;
+    &__left {
+      margin-top: 2.5rem;
+    }
+
+    &__right {
+      padding: 0 15rem !important;
+    }
+  }
+}

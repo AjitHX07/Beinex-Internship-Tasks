@@ -1,0 +1,77 @@
+1,ReferenceError
+
+    Description: Happens when you try to access a variable that hasn't been declared.
+    Example: Using an undeclared variable.
+
+try {
+  console.log(x); // 'x' is not defined
+} catch (error) {
+  console.error(error); // ReferenceError: x is not defined
+}
+-------------------------------------------------------------------------------------------
+
+2, TypeError
+
+    Description: Thrown when a variable or parameter is not of a valid type.
+    Example: Trying to call a non-function as a function.
+
+try {
+  let num = 5;
+  num(); // num is not a function
+} catch (error) {
+  console.error(error); // TypeError: num is not a function
+}
+
+---------------------------------------------------------------------------------------------
+
+3,RangeError
+
+    Description: Occurs when a number is out of an allowed range.
+    Example: Creating an array with an invalid length.
+
+    try {
+  let arr = new Array(-1); // Array length can't be negative
+} catch (error) {
+  console.error(error); // RangeError: Invalid array length
+}
+
+----------------------------------------------------------------------------------------------
+
+4,. EvalError
+
+    Description: Related to the use of the eval() function. It is rarely encountered nowadays.
+    Example: Manually throwing this error for demonstration.
+
+    try {
+  throw new EvalError('This is an EvalError');
+} catch (error) {
+  console.error(error); // EvalError: This is an EvalError
+}
+
+----------------------------------------------------------------------------------------------
+
+5, URIError
+
+    Description: Thrown when there’s an error in encodeURI() or decodeURI().
+    Example: Using decodeURI() incorrectly.
+
+try {
+  decodeURI('%'); // '%' is not a valid URI component
+} catch (error) {
+  console.error(error); // URIError: URI malformed
+}
+
+----------------------------------------------------------------------------------------------
+
+6,SyntaxError
+
+    Description: Occurs when the JavaScript code has incorrect syntax.
+    Example: Missing a closing parenthesis.
+
+javascript
+
+try {
+  eval('console.log("Hello World"'); // Missing closing parenthesis
+} catch (error) {
+  console.error(error); // SyntaxError: Unexpected end of input
+}

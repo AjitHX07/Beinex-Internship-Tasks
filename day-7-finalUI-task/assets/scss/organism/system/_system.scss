@@ -1,0 +1,19 @@
+.system {
+  height: 27rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .system {
+    height: 90rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .system {
+    height: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

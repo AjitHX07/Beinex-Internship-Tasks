@@ -1,0 +1,188 @@
+@media (max-width: 480px) {
+  header {
+    height: 6rem;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    nav {
+      width: 100%;
+    }
+  }
+
+  main {
+    height: 150vh;
+  }
+
+  #box-article {
+    flex-direction: column;
+    height: 65rem;
+
+    .items {
+      width: 80%;
+    }
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: 60rem;
+    .image-container {
+      width: 80%;
+      height: 20rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+    .about-data-container {
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+  .box-about {
+    margin: 4rem 0;
+  }
+
+  #courses {
+    height: 100rem;
+    .course-section {
+      flex-direction: column;
+
+      .course-box {
+        width: 80%;
+      }
+    }
+  }
+
+  #instructors {
+    height: 140rem;
+    .instructors-box {
+      flex-direction: column;
+
+      .instr-items {
+        width: 80%;
+      }
+    }
+  }
+
+  #testmonials {
+    height: 100rem;
+    .testmonials-sections {
+      flex-direction: column;
+    }
+    .testi-items {
+      width: 80%;
+    }
+  }
+  footer {
+    height: 70rem;
+
+    .footer-nav,
+    .footer-constacts,
+    .footer-gallery,
+    .footer-news {
+      width: 80%;
+    }
+
+    .footer-nav {
+      margin-top: 0;
+    }
+  }
+  .top-footer {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 991.98px) {
+  header {
+    height: 8rem;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    nav {
+      width: 100%;
+    }
+  }
+
+  main {
+    height: 80vh;
+  }
+
+  #box-article {
+    flex-direction: column;
+    height: 65rem;
+
+    .items {
+      width: 80%;
+    }
+  }
+
+  #about-us {
+    flex-direction: column;
+    height: 60rem;
+    .image-container {
+      width: 80%;
+      height: 20rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+    .about-data-container {
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+  .box-about {
+    margin: 4rem 0;
+  }
+
+  #courses {
+    height: 110rem;
+    .course-section {
+      flex-direction: column;
+
+      .course-box {
+        width: 80%;
+      }
+    }
+  }
+
+  #instructors {
+    height: 140rem;
+    .instructors-box {
+      flex-direction: column;
+
+      .instr-items {
+        width: 80%;
+      }
+    }
+  }
+
+  #testmonials {
+    height: 90rem;
+    .testmonials-sections {
+      flex-direction: column;
+    }
+    .testi-items {
+      width: 80%;
+    }
+  }
+  footer {
+    height: 70rem;
+
+    .footer-nav,
+    .footer-constacts,
+    .footer-gallery,
+    .footer-news {
+      width: 80%;
+    }
+
+    .footer-nav {
+      margin-top: 0;
+    }
+  }
+  .top-footer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

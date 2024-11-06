@@ -1,0 +1,32 @@
+$footer_bg: #263238;
+
+footer {
+  height: 20.5rem;
+  background-color: $footer_bg;
+
+  color: white !important;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    height: 60rem;
+
+    section {
+      flex-direction: column;
+    }
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  footer {
+    height: 78rem !important;
+    section {
+      flex-direction: column;
+    }
+  }
+}

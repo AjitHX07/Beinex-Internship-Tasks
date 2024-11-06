@@ -1,0 +1,22 @@
+.pixelgrade {
+  height: 27.063rem;
+  margin-top: 7rem;
+
+  h3 {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .pixelgrade {
+    height: 55rem;
+    margin-top: -1rem !important ;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pixelgrade {
+    height: 50rem;
+    text-align: center;
+  }
+}

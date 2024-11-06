@@ -1,0 +1,18 @@
+$paragraph_color: #717171;
+
+.client {
+  height: 12.875rem;
+  text-align: center;
+  margin-top: 1.5rem;
+
+  p {
+    padding: 0rem;
+    color: $paragraph_color !important;
+  }
+}
+@media (max-width: 600px) {
+  .client {
+    margin-top: 3.7rem !important;
+    height: 20rem;
+  }
+}

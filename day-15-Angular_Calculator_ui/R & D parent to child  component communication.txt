@@ -1,0 +1,78 @@
+1 ,Parent to Child Communication
+
+@Input Decorator
+
+    Use @Input() in the child component to receive data from the parent.
+
+    eg
+
+        --> Parent Component:
+
+        export class ParentComponent {
+        parentData = 'Hello from Parent!';
+        }
+
+        --> Child Component:
+
+        export class ChildComponent {
+        @Input() childData: string;
+        }
+
+        --> Template:
+
+        <app-child [childData]="parentData"></app-child>
+
+
+2 ,Template Reference Variable
+
+    Use a template reference variable to access a child component's properties or methods.
+
+   eg
+        --> Parent Template:
+
+        <app-child #child></app-child>
+        <button (click)="child.someMethod()">Call Child Method</button>
+
+
+---------------------------------------------------------------------------------------------
+
+Child to Parent Communication
+
+    @Output Decorator and EventEmitter
+        Use @Output() in the child component to emit events to the parent.
+
+
+eg
+    --> Child Component:
+
+        export class ChildComponent {
+        @Output() notifyParent = new EventEmitter<string>();
+
+        sendMessage() {
+            this.notifyParent.emit('Hello from Child!');
+        }
+        }
+
+    --> Parent Template:
+
+        <app-child (notifyParent)="receiveMessage($event)"></app-child>
+
+    --> Parent Component:
+
+        receiveMessage(message: string) {
+        console.log(message);
+        }
+
+Local Reference to Call Parent Method
+
+    Call a method on the parent directly from the child using a reference.
+eg
+    --> Child Template:
+
+        <button (click)="parentMethod()">Call Parent Method</button>
+
+    -->  Parent Component:
+
+        parentMethod() {
+        console.log('Called from Child');
+        }

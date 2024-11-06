@@ -1,0 +1,122 @@
+<div class="container">
+    <div class="card">
+        <h1>User Registration</h1>
+
+        <!-- Form View -->
+        <div *ngIf="showForm" class="form-section">
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" [(ngModel)]="user.name" #name="ngModel" required
+                        minlength="3" maxlength="50" placeholder="Enter your name">
+                    <div class="error-messages" *ngIf="name.touched && name.invalid">
+                        <span *ngIf="name.errors?.['required']">Name is required</span>
+                        <span *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</span>
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="user.email" #email="ngModel" required email
+                        placeholder="Enter your email">
+                    <div class="error-messages" *ngIf="email.touched && email.invalid">
+                        <span *ngIf="email.errors?.['required']">Email is required</span>
+                        <span *ngIf="email.errors?.['email']">Please enter a valid email</span>
+                    </div>
+                </div>
+
+                <!-- Password Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" [(ngModel)]="user.password"
+                            #password="ngModel" required minlength="8" placeholder="Enter password">
+                        <div class="error-messages" *ngIf="password.touched && password.invalid">
+                            <span *ngIf="password.errors?.['required']">Password is required</span>
+                            <span *ngIf="password.errors?.['minlength']">Password must be at least 8 characters</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"
+                            #passwordConfirm="ngModel" required placeholder="Confirm password">
+                        <div class="error-messages" *ngIf="userForm.errors?.['passwordMismatch']">
+                            <span>Passwords do not match</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Age Group -->
+                <div class="form-group">
+                    <label for="age">Age Group</label>
+                    <select id="age" name="age" [(ngModel)]="user.age" #age="ngModel" required>
+                        <option value="">Select age group</option>
+                        <option *ngFor="let group of ageGroups" [value]="group.value">
+                            {{group.label}}
+                        </option>
+                    </select>
+                    <div class="error-messages" *ngIf="age.touched && age.invalid">
+                        <span *ngIf="age.errors?.['required']">Age group is required</span>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" [(ngModel)]="user.gender" value="male" required>
+                            Male
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" [(ngModel)]="user.gender" value="female" required>
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" [disabled]="userForm.invalid">Register</button>
+            </form>
+        </div>
+
+        <!-- Table View -->
+        <div *ngIf="!showForm" class="table-section">
+            <div class="table-header">
+                <h2>Registered Users</h2>
+                <button class="add-button" (click)="onAddNew()">Add New User</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age Group</th>
+                            <th>Gender</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of userService.users$ | async">
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.gender}}</td>
+                            <td>
+                                <button class="delete-button" (click)="onDelete(user.id)">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
