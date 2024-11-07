@@ -1,0 +1,23 @@
+header {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 2rem 2rem;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+    }
+  }
+}
