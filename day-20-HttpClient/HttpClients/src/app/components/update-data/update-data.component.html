@@ -1,0 +1,21 @@
+<div class="post-form-container">
+    <h2>Update Post</h2>
+    <form (submit)="onUpdate()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" [(ngModel)]="postToUpdate.title" name="title" class="form-control"
+                placeholder="Enter updated post title" required />
+        </div>
+        <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" [(ngModel)]="postToUpdate.body" name="body" class="form-control"
+                placeholder="Enter updated post content" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Update</button>
+    </form>
+
+    <div *ngIf="response" class="response-message">
+        <h3>Response:</h3>
+        <pre>{{ response | json }}</pre>
+    </div>
+</div>

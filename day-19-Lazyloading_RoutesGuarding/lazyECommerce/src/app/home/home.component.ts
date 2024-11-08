@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CanActivate } from '@angular/router';
+import { ActivateGuard } from '@angular/ActivateGuard';
 
 
 @Component({
@@ -10,11 +11,11 @@ import { CanActivate } from '@angular/router';
 })
 export class HomeComponent {
 
-  // constructor(private activateGuard: ActivateGuard) { }
+  constructor(private activeG: ActivateGuard) { }
 
-  // checkBoxChange(canActive) {
+  checkBoxChange(_canActive: any) {
 
-
-  // }
+    this.activeG.
+  }
 
 }

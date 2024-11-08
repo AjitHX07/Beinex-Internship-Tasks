@@ -1,0 +1,19 @@
+<article>
+    <section class="full-data">
+
+        <div class="output-data-div" *ngIf="posts && posts.length">
+            <h2>Posts Data</h2>
+            <div class="box" *ngFor="let post of posts">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.body }}</p>
+                <small>User ID: {{ post.userId }}, Post ID: {{ post.id }}</small>
+            </div>
+        </div>
+        <div *ngIf="!posts.length">
+            <p>Loading posts...</p>
+        </div>
+        <ng-template #loading></ng-template>
+        <p>Loading...</p>
+    </section>
+    <!-- <section class="specific"></section> -->
+</article>

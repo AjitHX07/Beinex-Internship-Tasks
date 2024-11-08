@@ -1,0 +1,25 @@
+header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+    padding-left: 4rem;
+    a {
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: black;
+    }
+    li {
+      transition: all ease-out 200ms;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

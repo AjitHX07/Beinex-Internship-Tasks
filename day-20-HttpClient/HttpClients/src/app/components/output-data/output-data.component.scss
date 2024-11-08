@@ -1,0 +1,41 @@
+article {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .full-data {
+    width: 70%;
+    height: 100%;
+    border: 1px solid #ccc;
+
+    background-color: #f9f9f9;
+    padding: 1rem 3rem;
+    text-align: center;
+    .box {
+      border: 1px solid gray;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+    }
+    ul {
+      list-style: none;
+
+      li {
+        margin-top: 0.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+  .output-data-div {
+    border: 1px solid gray;
+    padding: 1rem 2rem;
+  }
+  .specific {
+    width: 50%;
+    height: 100%;
+  }
+}
