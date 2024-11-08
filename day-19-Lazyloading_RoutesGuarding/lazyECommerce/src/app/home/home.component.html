@@ -1,16 +1,21 @@
 <article>
     <section class="btn-grp">
-        <button [routerLink]="'/home/dress'">Dress</button>
-        <button [routerLink]="'/home/shoes'">Shoes</button>
-        <button [routerLink]="'/home/phones'">Phones</button>
+        <button routerLink="dress">Dress</button>
+        <button routerLink="shoes">Shoes</button>
+        <button routerLink="phones">Phones</button>
+
+
     </section>
 
-    <!-- <main>
-        CanActive: <input #canactive (change)="checkBoxChange(CanActive.checked)">
-    </main> -->
+    <main>
+        <!-- CanActive: <input #canactive (change)="checkBoxChange(CanActive.checked)"> -->
+    </main>
 
     <div>
-        <!-- Content of the routed components will be rendered here -->
+
+        <!-- <router-outlet></router-outlet> -->
         <router-outlet></router-outlet>
+
+
     </div>
 </article>

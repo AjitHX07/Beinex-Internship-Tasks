@@ -9,6 +9,7 @@ import { CustomersRoutingModule } from './customers-routing.module';
   declarations: [
     CustomersComponent
   ],
+  exports: [CustomersComponent],
   imports: [
     CommonModule,
     CustomersRoutingModule

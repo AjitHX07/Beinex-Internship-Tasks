@@ -7,18 +7,21 @@ import { HomeComponent } from './home/home.component';
 import { PhonesComponent } from './phones/phones.component';
 import { DressComponent } from './dress/dress.component';
 import { ShoesComponent } from './shoes/shoes.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { CustomersModule } from './customers/customers.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    PhonesComponent,
-    DressComponent,
-    ShoesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CustomersModule,
+    HomeModule,
+    // RouterLink,
+    // RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
