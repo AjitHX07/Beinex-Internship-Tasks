@@ -1,0 +1,33 @@
+<article>
+    <section>
+        <h1>User Data</h1>
+        <div *ngIf="loading">Loading...</div>
+        <div *ngIf="error" class="error-message">
+            An error occurred: {{ error }}
+        </div>
+        <table *ngIf="!loading && !error">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Zipcode</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.address.city }}</td>
+                    <td>{{ user.address.zipcode }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.website }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</article>

@@ -1,0 +1,33 @@
+article {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  section {
+    width: 60%;
+    height: auto;
+    // background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    h1 {
+      margin: 1rem 0;
+    }
+    table,
+    td,
+    th {
+      border: 1px solid gray;
+      border-collapse: collapse;
+      padding: 0.5rem;
+      margin: 1rem 0;
+    }
+  }
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+}
