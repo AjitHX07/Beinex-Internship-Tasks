@@ -1,0 +1,64 @@
+--Pure Pipes--
+
+    1, Definition: 
+    
+    Pure pipes are only re-evaluated when their input values change.
+    
+    2, Performance: 
+    
+    More efficient since they don't run with every change detection cycle, only when the data bound to the pipe changes.
+    
+    3, Use Cases:
+    
+     Best for transformations where inputs don’t frequently change, like formatting a static text.
+    
+    Example:
+    @Pipe({
+     name: 'pureExample',
+     pure: true 
+    })
+    export class PureExamplePipe implements PipeTransform {
+    transform(value: string): string {
+    return value.toUpperCase();
+  }
+}
+
+
+--Impure Pipes--
+
+    1, Definition:
+    
+     Impure pipes are re-evaluated on every change detection cycle, even if the input values haven't changed.
+    
+    2, Performance:
+    
+     Less efficient because they run on each change detection cycle, which can impact performance negatively, especially in complex applications.
+    
+    3, Use Cases:
+    
+     Useful when the pipe's input depends on something other than its arguments, like when a pipe needs to be updated when an array or object is modified without reassignment.
+     
+    Example:
+
+    @Pipe({
+  name: 'impureExample',
+  pure: false 
+    })
+    export class ImpureExamplePipe implements PipeTransform {
+    transform(value: any[]): number {
+    return value.length;
+  }
+}
+
+
+Performance Considerations:
+
+   1,  Pure Pipe:
+
+        Angular only checks it when the bound input value changes, so it’s fast and efficient.
+        Suitable for most use cases.
+    
+    2, Impure Pipe:
+    
+        Can slow down the application because it's checked on every change detection cycle, regardless of whether the input changes.
+        Only use when necessary (e.g., when data changes without reassigning the variable, such as a mutation in an array).
