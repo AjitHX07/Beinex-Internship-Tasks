@@ -1,0 +1,39 @@
+<article>
+    <section>
+        <div>
+            <label for="color">Font Color:</label>
+            <input type="text" id="color" [(ngModel)]="fontColor" placeholder="Enter font color" />
+        </div>
+
+        <div>
+            <label for="weight">Font Weight:</label>
+            <input type="text" id="weight" [(ngModel)]="fontWeight" placeholder="Enter font weight" />
+        </div>
+
+        <div>
+            <label class="check" for="trigger">Trigger (hover/click):</label>
+            <select id="trigger" [(ngModel)]="trigger">
+                <option value="hover">Hover</option>
+                <option value="click">Click</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="active">Activate Directive:</label>
+            <input type="checkbox" id="active" [(ngModel)]="isActive" />
+        </div>
+
+        <div class="para">
+            <p appChangeFontStyle [isActive]="isActive" [fontColor]="fontColor" [fontWeight]="fontWeight"
+                [trigger]="trigger">
+                Hover or click on this paragraph to change its style! version 1
+            </p>
+
+            <p appChangeFontStyle [isActive]="isActive" [fontColor]="fontColor" [fontWeight]="fontWeight"
+                [trigger]="trigger">
+                Hover or click on this paragraph to change its style! version 2
+            </p>
+        </div>
+
+    </section>
+</article>
