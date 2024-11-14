@@ -1,0 +1,20 @@
+<div class="app-container">
+  <nav class="navbar">
+    <div class="nav-brand">Shopping Cart</div>
+    <div class="nav-links">
+      <a routerLink="products" routerLinkActive="active" class="nav-link">
+        Products
+      </a>
+      <a routerLink="/cart" routerLinkActive="active" class="nav-link cart-link">
+        Cart
+        @if ((cartItemCount$ | async) > 0) {
+        <span class="cart-badge">{{ cartItemCount$ | async }}</span>
+        }
+      </a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

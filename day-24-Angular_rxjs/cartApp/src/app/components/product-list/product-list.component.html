@@ -1,0 +1,14 @@
+<div class="product-grid">
+    <div *ngIf="isLoading$ | async" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading products...</p>
+    </div>
+
+    <div *ngIf="!(isLoading$ | async)" class="products-container">
+        <div *ngFor="let product of products$ | async; trackBy: trackByProductId" class="product-item">
+            <app-product-card [product]="product" [isCartEnabled]="isCartEnabled$ | async"
+                (addToCart)="onAddToCart($event)">
+            </app-product-card>
+        </div>
+    </div>
+</div>

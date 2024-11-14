@@ -1,0 +1,30 @@
+<div class="cart-container">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <div class="cart-controls">
+            <button (click)="toggleCart()" class="toggle-cart-btn">
+                {{ (isCartEnabled$ | async) ? 'Disable' : 'Enable' }} Cart
+            </button>
+            <span class="total-amount">
+                Total: {{ totalAmount$ | async | currency }}
+            </span>
+        </div>
+    </div>
+
+    <div class="cart-items">
+        <div *ngFor="let item of cartItems$ | async" class="cart-item">
+            <img [src]="item.image" [alt]="item.title" class="item-image">
+            <div class="item-details">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.price | currency }}</p>
+                <div class="item-controls">
+                    <input type="number" [ngModel]="item.quantity" (ngModelChange)="updateQuantity(item.id, $event)"
+                        min="1" [disabled]="!(isCartEnabled$ | async)" class="quantity-input">
+                    <button (click)="removeItem(item.id)" [disabled]="!(isCartEnabled$ | async)" class="remove-btn">
+                        Remove
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
