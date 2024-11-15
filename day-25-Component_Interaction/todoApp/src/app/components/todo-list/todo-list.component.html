@@ -1,0 +1,20 @@
+<div class="todo-container">
+    <h1>Todo List</h1>
+
+    <div class="task-stats">
+        <p>Total Tasks: {{ totalTasks$ | async }}</p>
+        <p>Completed Tasks: {{ completedTasks$ | async }}</p>
+    </div>
+
+    <div class="add-task">
+        <input type="text" [(ngModel)]="newTaskTitle" (keyup.enter)="addTask()" placeholder="Add new task..."
+            class="task-input">
+        <button (click)="addTask()" class="add-btn">Add Task</button>
+    </div>
+
+    <div class="tasks-list">
+        @for (task of tasks$ | async; track task.id) {
+        <app-task-item [task]="task" (taskCompleted)="onTaskCompleted($event)" (taskDeleted)="onTaskDeleted($event)" />
+        }
+    </div>
+</div>
