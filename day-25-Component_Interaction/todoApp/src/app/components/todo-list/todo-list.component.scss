@@ -1,0 +1,54 @@
+.todo-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+h1 {
+  margin: 1rem 0;
+}
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+.add-task {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.task-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.add-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #52ae7a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  transition: all 200ms ease-out;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+.add-btn:hover {
+  background-color: #49c060;
+}
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
