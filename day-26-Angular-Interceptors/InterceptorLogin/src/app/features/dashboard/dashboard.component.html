@@ -1,0 +1,12 @@
+<div class="dashboard-container">
+    <header>
+        <h1>Dashboard</h1>
+        <button (click)="logout()">Logout</button>
+    </header>
+    @if (user$()) {
+    <div class="user-info">
+        <h2>Welcome, {{ user$().name }}!</h2>
+        <p>Email: {{ user$().email }}</p>
+    </div>
+    }
+</div>
