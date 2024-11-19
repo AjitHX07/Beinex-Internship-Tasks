@@ -1,0 +1,31 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Name:</label>
+        <input type="text" formControlName="name">
+        @if (formGroup.get('name')?.errors?.['required'] &&
+        formGroup.get('name')?.touched) {
+        <span class="error">Name is required</span>
+        }
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+        @if (formGroup.get('email')?.errors?.['required'] &&
+        formGroup.get('email')?.touched) {
+        <span class="error">Email is required</span>
+        }
+        @if (formGroup.get('email')?.errors?.['email'] &&
+        formGroup.get('email')?.touched) {
+        <span class="error">Please enter a valid email</span>
+        }
+    </div>
+    <div>
+        <label>Message:</label>
+        <textarea formControlName="message"></textarea>
+        @if (formGroup.get('message')?.errors?.['required'] &&
+        formGroup.get('message')?.touched) {
+        <span class="error">Message is required</span>
+        }
+    </div>
+    <button type="submit" [disabled]="formGroup.invalid">Submit</button>
+</form>

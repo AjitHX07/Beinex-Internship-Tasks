@@ -1,0 +1,6 @@
+<h1>User Dashboard</h1>
+<p>Welcome, {{ user()?.email }}</p>
+<nav>
+    <a routerLink="/form">Go to Form</a>
+</nav>
+<button (click)="logout()">Logout</button>
