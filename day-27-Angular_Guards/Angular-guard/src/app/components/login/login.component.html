@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" required>
+        <!-- Add validation error messages -->
+        <div
+            *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+            <small *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</small>
+            <small *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email format</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" required>
+        <!-- Add validation error messages -->
+        <div
+            *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</small>
+        </div>
+    </div>
+
+    <!-- Display login error message -->
+    <div *ngIf="loginError" class="error-message">
+        {{ loginError }}
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
